@@ -5,12 +5,14 @@ Requisiti del progetto
 Lo scopo del progetto e realizzare, in un linguaggio di programmazione a scelta, un sistema distribuito che
 usi protocolli di consenso utilizzando i servizi Cloud messi a disposizione da AWS Educate, Google o altro
 provider (inclusa una piattaforma di Cloud privata, gestita ad esempio con OpenStack).
-Il sistema distribuito da realizzare e a scelta del gruppo di studenti. Esempi possibili includono: `
-• un gioco multi-player;
-• una chat room distribuita e tollerante a guasti, in cui l’ordine dei messaggi scambiati tra molteplici
+Il sistema distribuito da realizzare e a scelta del gruppo di studenti. 
+
+Esempi possibili includono: `
+# • un gioco multi-player;
+# • una chat room distribuita e tollerante a guasti, in cui l’ordine dei messaggi scambiati tra molteplici
 partecipanti alla chat sia lo stesso.
 Il sistema distribuito proposto deve soddisfare i requisiti funzionali e non funzionali elencati di seguito.
-• Supportare molteplici entita autonome che si contendono risorse condivise. `
+# • Supportare molteplici entita autonome che si contendono risorse condivise. `
 • Supportare l’aggiornamento in tempo reale di una qualche forma di stato condiviso.
 • Essere distribuito su molteplici nodi (eventualmente distribuiti geograficamente).
 • Non fare affidamento su entita centralizzate per funzionalit ` a essenziali; i soli servizi centralizza- `
