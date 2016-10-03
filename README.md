@@ -7,23 +7,22 @@ usi protocolli di consenso utilizzando i servizi Cloud messi a disposizione da A
 provider (inclusa una piattaforma di Cloud privata, gestita ad esempio con OpenStack).
 Il sistema distribuito da realizzare e a scelta del gruppo di studenti. 
 
-Esempi possibili includono: `
-# • un gioco multi-player;
-# • una chat room distribuita e tollerante a guasti, in cui l’ordine dei messaggi scambiati tra molteplici
+Esempi possibili includono:
+• un gioco multi-player;
+• una chat room distribuita e tollerante a guasti, in cui l’ordine dei messaggi scambiati tra molteplici
 partecipanti alla chat sia lo stesso.
 Il sistema distribuito proposto deve soddisfare i requisiti funzionali e non funzionali elencati di seguito.
-# • Supportare molteplici entita autonome che si contendono risorse condivise. `
+• Supportare molteplici entita autonome che si contendono risorse condivise.
 • Supportare l’aggiornamento in tempo reale di una qualche forma di stato condiviso.
 • Essere distribuito su molteplici nodi (eventualmente distribuiti geograficamente).
-• Non fare affidamento su entita centralizzate per funzionalit ` a essenziali; i soli servizi centralizza- `
-ti consentiti riguardano la registrazione e l’accesso degli utenti al sistema e simili funzionalita di `
-gestione.
+• Non fare affidamento su entita centralizzate per funzionalità essenziali; (i soli servizi centralizza- 
+ti consentiti riguardano la registrazione e l’accesso degli utenti al sistema e simili funzionalita di gestione.)
 • Supportare la scalabilita (rispetto al numero di utenti) e l’affidabilità disponibilità. Per soddisfare 
 quest’ultimo requisito occorre adottare opportune tecniche di replicazione della computazione/ deidati
-su molteplici nodi del sistema. Si descriva nella relazione quale tipo di scalabilita (rispetto alla `
+su molteplici nodi del sistema. Si descriva nella relazione quale tipo di scalabilita (rispetto alla
 dimensione, geografica) viene soddisfatta dal sistema realizzato, motivando opportunamente la scelta
 e le soluzioni adottate; si descrivano inoltre quali soluzioni sono state adottate per garantire un’elevata
-affidabilita/disponibilit ` a.`
+affidabilita/disponibilit.
 • Usare un protocollo di consenso distribuito per mantenere uno stato condiviso consistente tra le moltiplico
 repliche, ovvero l’algoritmo di Paxos esaminato a lezione o sue varianti (ad es. Fast Paxos),
 oppure altri protocolli di consenso proposti recentemente, in particolare Raft [2, 1].
@@ -34,8 +33,6 @@ e delle altre eventuali scelte effettuate dal gruppo. I componenti del sistema d
 nello spazio utente e senza richiedere privilegi di root. Si richiede inoltre che il sistema distribuito sia
 configurabile, ad es. tramite un file in cui sia possibile specificare i valori dei parametri di configurazione
 (tra cui, numero iniziale di repliche).
-Si realizzi un testing completo delle funzionalita offerte e dei diversi casi d’uso del sistema distribuito `
-realizzato, presentandone i risultati nella relazione.
-E possibile usare librerie e tool di supporto allo sviluppo del progetto; le librerie ed i tool usati devono `
-essere esplicitamente indicati e brevemente descritti nella relazione.
+Si realizzi un testing completo delle funzionalita offerte e dei diversi casi d’uso del sistema distribuito realizzato, presentandone i risultati nella relazione.
+E possibile usare librerie e tool di supporto allo sviluppo del progetto; le librerie ed i tool usati devono essere esplicitamente indicati e brevemente descritti nella relazione.
 
