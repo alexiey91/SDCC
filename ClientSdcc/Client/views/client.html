@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="it">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<head><title>Ciao Mondo!</title></head>
+<body>
+  <div ng-app="myApp" ng-controller="testConnection">
+    <h1>Ciao Mondo!</h1>
+    <p>Questa è la nostra prima pagina HTML!</p>
+</div>
+
+<script>
+
+var app = angular.module("myApp", []);
+
+app.controller("testConnection", function($scope,$http,$window,$location) {
+  var dat = {
+        "number" : "10"
+  }
+  /*$http.post('http://10.200.43.118:3000/roulette/postrand/',dat)
+ .then(function(response) {
+     console.log("Done"+response.data);
+ });*/
+ $http.post('http://ec2-54-70-33-109.us-west-2.compute.amazonaws.com:8080/login',dat)
+.then(function(response) {
+    console.log("Done"+response.data.link);
+    $window.location.href=response.data.link;
+
+  //  $window.location.href = response.data.link;
+},function(response){
+  console.log("MAnnaggia");
+  //$window.location.href=$location.path('http://www.google.it');
+//$window.location.href='http://192.168.0.6:1000/router/';
+});
+});
+
+</script>
+</body>
+
+
+
+
+</html>
