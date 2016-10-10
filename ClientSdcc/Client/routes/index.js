@@ -5,7 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 //  res.render('home', { title: 'Express' );
 //router.use('/views', express.static('./views'));
-  res.sendfile('views/client.html');
+  res.sendfile('views/LogIn.html');
+
 
 });
 
