@@ -31,11 +31,11 @@
 
 </head>
 
-<body id="page-top" class="index" a>
+<body id="page-top" class="index" >
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
+        <div class="container" >
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -51,13 +51,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Credits</a>
+                        <a href="" >Credits<span class="glyphicon glyphicon-euro" aria-hidden="true"></span></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">LogOut</a>
+                        <a href="#about">Game Rules</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Game Rules</a>
+                        <a href="">LogOut</a>
                     </li>
                 </ul>
             </div>
@@ -67,12 +67,17 @@
     </nav>
 
     <!-- Header -->
-    <header  >
-        <div class="container">
-            <div class="row">
+    <header  style="background-color:#2C3E50">
+        <div class="container" style="background-color:#2C3E50">
+            <div class="row" style="background-color:#2C3E50">
                 <div class="col-lg-12">
                     <!-- <img class="img-responsive" src="img/Tabellone.png" alt=""> -->
-                    <table id="tabellone" class="table table-bordered tabellone">
+
+                    <div class="intro-text" style="position: relative; top: -80px ">
+                        <span class="name">Bellagio Casinò</span>
+                        <hr class="star-light" >
+                    </div>
+                    <table id="tabellone" class="table table-bordered tabellone" style="position: relative; top: -75px " >
         <tbody>
                         <tr data-toggle="modal" data-target="#modale-puntata">
                           <td id="0" rowspan="3" background='img/0.png' width="149px" height="225px" style='border: 1px solid transparent ; background-repeat: no-repeat ; border-right: 1px solid white '></td>
@@ -149,26 +154,16 @@
                           <td id="odd" colspan="2" background='img/odd.png' width="150px" height="75px"style='border: 2px solid white; background-position:center'></td>
                           <td id="2ndHalf" colspan="2" background='img/2ndHalf.png' width="150px" height="75px"style='border: 2px solid white ; background-position:center'></td>
 
-
-
-
-                          <!--<td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> -->
                         </tr>
                       </tbody>
                     </table>
-
-
-
-
 
                     <div class="intro-text">
                         <span class="name">Hai puntato:<span id="totalBet"></span><span id="puntata"></span></span>
                         <hr class="star-light">
                         <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -188,7 +183,6 @@
                             <h2>Total bet on <span id="textModal"></span>:
                               <span id="tempModalQuote">0</span></h2>
                             <hr class="star-primary">
-
                             <button class="modal-fiches"type="button" value="1">1</button>
                             <button class="modal-fiches" type="button" value="5">5</button><br>
                             <button class="modal-fiches" type="button" value="10">10</button>
@@ -201,6 +195,77 @@
             </div>
         </div>
     </div>
+
+
+    <!-- About Section -->
+    <section class="success" id="about" style='background-color:#2C3E50'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <div class="intro-text">
+                      <h1 class="name" tyle="position: relative; top: -1000px ">Game Rules</h1>
+                      <hr class="star-light" >
+                  </div>
+
+                  <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td colspan="2"  style='background-repeat: no-repeat;background-position:center ; border: 7px solid #2C3E50; border-bottom: 20px solid #2C3E50 ' ><h2>Firs of all, choice the bet from the list belove and attend the exit of number from roulette.</h2>
+                                        <h2>Let's Play and Good Luck</h2></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td background='img/3.1.png' style='background-repeat: no-repeat;background-position:center ; border: 7px solid #2C3E50 ' width="75 px" height="75px" ></td>
+                        <td height="75px" style='background-position:center ; border: 7px solid transparent '><h2 height="75px">Bet on single Number</h2></td>
+                        </tr>
+                        <tr>
+                          <td background='img/2to1_legend.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50 ' width='75px' height='75px'></td>
+                          <td height='75px'  style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on selected row </h2></td>
+                          </tr>
+                          <tr>
+                            <td  background='img/1st12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                            <td height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the first 12th number</h2></td>
+                            </tr>
+                            <tr>
+                              <td background='img/2nd12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                              <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the second 12th number</h2></td>
+                              </tr>
+                              <tr>
+                                <td background='img/3rd12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                                <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the third 12th number</h2></td>
+                                </tr>
+                                <tr>
+                                  <td background='img/1stHalf.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50 ' width='225px' height='75px'></td>
+                                  <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the first 18th number(19-36)</h2></td>
+                                  </tr>
+                                  <tr>
+                                    <td background='img/2ndHalf.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50; border-bottom: 14px solid #2C3E50  ' width='225px' height='75px'></td>
+                                    <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the second 18th number(19-36) </h2></td>
+                                    </tr>
+                                    <tr>
+                                      <td background='img/Even.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50;  border-bottom: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                                      <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all even number</h2></td>
+                                      </tr>
+                                      <tr>
+                                        <td background='img/Odd.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50;  border-bottom: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                                        <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all odd number</h2></td>
+                                        </tr>
+                                        <tr>
+                                          <td background='img/red.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50;  border-bottom: 8px solid #2C3E50; border-top: 0px solid #2C3E50 ' width='225px' height='75px'></td>
+                                          <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all red number</h2></td>
+                                          </tr>
+                                          <tr>
+                                            <td background='img/black.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50 ' width='225px' height='75px'></td>
+                                            <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all black number</h2></td>
+                                            </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
 
