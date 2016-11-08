@@ -77,7 +77,7 @@
                         <span class="name">Bellagio Casinò</span>
                         <hr class="star-light" >
                     </div>
-                    <table id="tabellone" class="table table-bordered tabellone" style="position: relative; top: -75px " >
+                    <table id="tabellone" class="table table-bordered tabellone" style="position: relative; top: -75px; " >
         <tbody>
                         <tr data-toggle="modal" data-target="#modale-puntata">
                           <td id="0" rowspan="3" background='img/0.png' width="149px" height="225px" style='border: 1px solid transparent ; background-repeat: no-repeat ; border-right: 1px solid white '></td>
@@ -159,7 +159,8 @@
                     </table>
 
                     <div class="intro-text">
-                        <span class="name">Hai puntato:<span id="totalBet"></span><span id="puntata"></span></span>
+                        <span class="name"><span>Place you're bet</span><span id="totalBet"></span><span id="puntata"></span></span>
+                        <span class="name"><span id="confirmBetText"></span><button id="confirmBet" hidden type="button" style="border-radius: 60px; border: 1px solid transparent; background-color: transparent;color:green" value="Yes"><i class="fa fa-check"></i></button></span>
                         <hr class="star-light">
                     </div>
 
@@ -167,7 +168,7 @@
             </div>
         </div>
     </header>
-    <div class="modal fade" id="modale-puntata" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modale-puntata" role="dialog" aria-hidden="true">
         <div class="modal-content" style="position:relative; top:20%;">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
