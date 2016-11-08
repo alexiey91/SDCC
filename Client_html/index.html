@@ -79,7 +79,7 @@
                     </div>
                     <table id="tabellone" class="table table-bordered tabellone" style="position: relative; top: -75px; " >
         <tbody>
-                        <tr data-toggle="modal" data-target="#modale-puntata">
+                        <tr data-toggle="modal" data-target="#modale-puntata" >
                           <td id="0" rowspan="3" background='img/0.png' width="149px" height="225px" style='border: 1px solid transparent ; background-repeat: no-repeat ; border-right: 1px solid white '></td>
 
                           <!-- <th>#</th> -->
@@ -160,7 +160,7 @@
 
                     <div class="intro-text">
                         <span class="name"><span>Place you're bet</span><span id="totalBet"></span><span id="puntata"></span></span>
-                        <span class="name"><span id="confirmBetText"></span><button id="confirmBet" hidden type="button" style="border-radius: 60px; border: 1px solid transparent; background-color: transparent;color:green" value="Yes"><i class="fa fa-check"></i></button></span>
+                        <span class="name"><span id="confirmBetText"></span><button id="confirmBet" hidden type="button" style="border-radius: 60px; border: 1px solid transparent; background-color: transparent;color:#2b9d62" value="Yes"><i class="fa fa-check"></i></button></span>
                         <hr class="star-light">
                     </div>
 
@@ -168,7 +168,8 @@
             </div>
         </div>
     </header>
-    <div class="modal fade" id="modale-puntata" role="dialog" aria-hidden="true">
+
+    <div class="modal fade " id="modale-puntata" tabindex="-1" role="dialog" aria-hidden="true" style="  position:absolute; top:50px; bottom:100px; left:100px; right:100px">
         <div class="modal-content" style="position:relative; top:20%;">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -179,91 +180,107 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body" align="center">
+                        <div class="modal-body " align="center">
                             <h2>Total bet on <span id="textModal"></span>:
                               <span id="tempModalQuote">0</span></h2>
                             <hr class="star-primary">
-                            <button class="modal-fiches"type="button" value="-1">-1</button>
-                            <button class="modal-fiches"type="button" value="1">1</button><br>
+                            <div class= 'col-lg-3'>
+                            <img class="img-responsive" src="img/Fiches_1.png" alt="">
+                            <button class="modal-fiches"type="button" value="-1" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true" style="color:white"></button>
+                            <button class="modal-fiches"type="button" value="1" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:white"></button><br>
+                          </div>
+                          <div class= 'col-lg-3'>
+                            <img class="img-responsive" src="img/Fiches_5.png" alt="">
 
-                            <button class="modal-fiches" type="button" value="-5">5</button>
-                            <button class="modal-fiches" type="button" value="5">5</button><br>
+                            <button class="modal-fiches " type="button" value="-5" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true"style="color:white" ></button>
+                            <button class="modal-fiches "  type="button" value="5" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true"style="color:white" ></button><br>
+                          </div>
+                          <div class= 'col-lg-3'>
+                            <img class="img-responsive" src="img/Fiches_10.png" alt="">
 
-                            <button class="modal-fiches" type="button" value="-10">-10</button>
-                            <button class="modal-fiches" type="button" value="10">10</button><br>
+                            <button class="modal-fiches" type="button" value="-10" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true"style="color:white" ></button>
+                            <button class="modal-fiches" type="button" value="10" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true"style="color:white" ></button><br>
+                          </div>
+                            <div class= 'col-lg-3'>
+                              <img class="img-responsive" src="img/Fiches_50.png" alt="">
 
-                            <button class="modal-fiches" type="button" value="-50">-50</button>
-                            <button class="modal-fiches" type="button" value="50">50</button><br><br>
-                            <button class="modal-fiches-confirm btn btn-default" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Confirm </button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button class="modal-fiches" type="button" value="-50" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true"style="color:white" ></button>
+                            <button class="modal-fiches" type="button" value="50" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true"style="color:white" ></button><br><br>
+                          </div>
+                            <button class="modal-fiches-confirm btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Confirm </button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
 
     <!-- About Section -->
-    <section class="success" id="about" style='background-color:#2C3E50'>
+    <section class="success" id="about" style='background-color:#0e1a22'>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                   <div class="intro-text">
                       <h1 class="name" tyle="position: relative; top: -1000px ">Game Rules</h1>
-                      <hr class="star-light" >
+                      <hr class="star-light "  >
                   </div>
 
                   <table class="table table-bordered">
                 <thead>
                     <tr>
-                      <td colspan="2"  style='background-repeat: no-repeat;background-position:center ; border: 7px solid #2C3E50; border-bottom: 20px solid #2C3E50 ' ><h2>Firs of all, choice the bet from the list belove and attend the exit of number from roulette.</h2>
+                      <td colspan="2"  style='background-repeat: no-repeat;background-position:center ; border: 3px solid #2C3E50; border-bottom: 3px solid #2C3E50 ' ><h2>Firs of all, choice the bet from the list belove and attend the exit of number from roulette.</h2>
                                         <h2>Let's Play and Good Luck</h2></td>
+                    </tr>
+                    <tr>
+                      <td colspan='2' width="75 px" height="50px" style='border: 7px solid transparent ;border-top: 3px solid #2C3E50' ></td>
                     </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td background='img/3.1.png' style='background-repeat: no-repeat;background-position:center ; border: 7px solid #2C3E50 ' width="75 px" height="75px" ></td>
+                        <td background='img/3.1.png' style='background-repeat: no-repeat;background-position:center ; border: 7px solid #0e1a22  ' width="75 px" height="75px" ></td>
                         <td height="75px" style='background-position:center ; border: 7px solid transparent '><h2 height="75px">Bet on single Number</h2></td>
                         </tr>
                         <tr>
-                          <td background='img/2to1_legend.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50 ' width='75px' height='75px'></td>
+                          <td background='img/2to1_legend.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #0e1a22 ' width='75px' height='75px'></td>
                           <td height='75px'  style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on selected row </h2></td>
                           </tr>
                           <tr>
-                            <td  background='img/1st12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                            <td  background='img/1st12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #0e1a22 ' width='225px' height='75px'></td>
                             <td height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the first 12th number</h2></td>
                             </tr>
                             <tr>
-                              <td background='img/2nd12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                              <td background='img/2nd12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #0e1a22 ' width='225px' height='75px'></td>
                               <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the second 12th number</h2></td>
                               </tr>
                               <tr>
-                                <td background='img/3rd12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                                <td background='img/3rd12.png' style='background-repeat: no-repeat; background-position:center; border: 14px solid #0e1a22 ' width='225px' height='75px'></td>
                                 <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the third 12th number</h2></td>
                                 </tr>
                                 <tr>
-                                  <td background='img/1stHalf.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50 ' width='225px' height='75px'></td>
-                                  <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the first 18th number(19-36)</h2></td>
+                                  <td background='img/1stHalf.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #0e1a22 ' width='225px' height='75px'></td>
+                                  <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the first 18th number(1-36)</h2></td>
                                   </tr>
                                   <tr>
-                                    <td background='img/2ndHalf.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50; border-bottom: 14px solid #2C3E50  ' width='225px' height='75px'></td>
+                                    <td background='img/2ndHalf.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #0e1a22; border-bottom: 14px solid #0e1a22  ' width='225px' height='75px'></td>
                                     <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the second 18th number(19-36) </h2></td>
                                     </tr>
                                     <tr>
-                                      <td background='img/Even.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50;  border-bottom: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                                      <td background='img/Even.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #0e1a22;  border-bottom: 14px solid #0e1a22 ' width='225px' height='75px'></td>
                                       <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all even number</h2></td>
                                       </tr>
                                       <tr>
-                                        <td background='img/Odd.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50;  border-bottom: 14px solid #2C3E50 ' width='225px' height='75px'></td>
+                                        <td background='img/Odd.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #0e1a22;  border-bottom: 14px solid #0e1a22 ' width='225px' height='75px'></td>
                                         <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all odd number</h2></td>
                                         </tr>
                                         <tr>
-                                          <td background='img/red.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50;  border-bottom: 8px solid #2C3E50; border-top: 0px solid #2C3E50 ' width='225px' height='75px'></td>
+                                          <td background='img/red.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #0e1a22;  border-bottom: 8px solid #0e1a22; border-top: 0px solid #2C3E50 ' width='225px' height='75px'></td>
                                           <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all red number</h2></td>
                                           </tr>
                                           <tr>
-                                            <td background='img/black.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #2C3E50 ' width='225px' height='75px'></td>
+                                            <td background='img/black.png' style='background-repeat: no-repeat; background-position:center; border: 7px solid #0e1a22 ' width='225px' height='75px'></td>
                                             <td  height='75px' style='background-position:center ; border: 7px solid transparent '><h2 height='75px'> Bet on the all black number</h2></td>
                                             </tr>
                     </tbody>
