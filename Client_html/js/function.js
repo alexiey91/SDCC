@@ -2,8 +2,6 @@ $(".tabellone td").click(function(){
   //alert("tabellone"+this.id);
   console.log("hey",this.id,this.id=="");
   if(this.id != ""){
-    $('#puntata').prop('innerHTML',"");
-    $('#totalBet').prop('innerHTML',"");
     $('#textModal').prop('innerHTML',this.id);
     $('#tempModalQuote').prop('innerHTML',0);
   }
@@ -12,6 +10,8 @@ $(".tabellone td").click(function(){
 $(".modal-fiches").click(function(){
 
   var tempSum = parseInt($('#tempModalQuote').prop('innerHTML'))+parseInt(this.value);
+  if(tempSum<0)
+    tempSum=0;
   $('#tempModalQuote').prop('innerHTML',tempSum);
 });
 
