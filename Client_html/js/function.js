@@ -1,3 +1,4 @@
+
 $(".tabellone td").click(function(){
   //alert("tabellone"+this.id);
   //console.log("hey",this.id,this.id=="");
@@ -45,7 +46,7 @@ $('#confirmBet').click(function(){
   $('#2nd12').attr('data-target',null);
   $('#3rd12').attr('data-target',null);
   $('.tabellone').css('opacity',0.5);
-
+  $('#video').get(0).play();
  setTimeout(function(){
    console.log("+-+-+-+-timeout-+-+-+-+")
    $('.tabellone tr').each(function(){
@@ -57,6 +58,8 @@ $('#confirmBet').click(function(){
    $('#2nd12').attr('data-target',"#modale-puntata");
    $('#3rd12').attr('data-target',"#modale-puntata");
    $('.tabellone').css('opacity',1);
+   $('#modale-roulette').modal('toggle');
+
  },10000);
 
 

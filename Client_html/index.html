@@ -160,7 +160,7 @@
 
                     <div class="intro-text">
                         <span class="name"><span>Place you're bet</span><span id="totalBet"></span><span id="puntata"></span></span>
-                        <span class="name"><span id="confirmBetText"></span><button id="confirmBet" hidden type="button" style="border-radius: 60px; border: 1px solid transparent; background-color: transparent;color:#2b9d62" value="Yes"><i class="fa fa-check"></i></button></span>
+                        <span class="name"><span id="confirmBetText"></span><button id="confirmBet" hidden type="button" style="border-radius: 60px; border: 1px solid transparent; background-color: transparent;color:#2b9d62" value="Yes" data-toggle="modal" data-target="#modale-roulette" data-backdrop="static" data-keyboard="false"><i class="fa fa-check"></i></button></span>
                         <hr class="star-light">
                     </div>
 
@@ -168,9 +168,9 @@
             </div>
         </div>
     </header>
-
-    <div class="modal fade " id="modale-puntata" tabindex="-1" role="dialog" aria-hidden="true" style="  position:absolute; top:50px; bottom:100px; left:100px; right:100px">
-        <div class="modal-content" style="position:relative; top:20%;">
+    <!-- modale puntata -->
+    <div class="modal fade" id="modale-puntata" tabindex="-1" role="dialog" aria-hidden="true" >
+        <div class="modal-content" style="position:absolute; top:50px; left:100px; right:100px">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
                     <div class="rl">
@@ -211,6 +211,25 @@
                             <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- modale roulette -->
+    <div class="modal fade" id="modale-roulette" tabindex="-1" role="dialog" aria-hidden="true" align="center" >
+        <div class="modal-content" style="position:absolute; top:50px; left:100px; right:100px" align="center">
+            <div class="close-modal" data-dismiss="modal" >
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container" align="center">
+                <div class="row" align="center">
+                  <video id="video" controls>
+                    <source src="img/video/Roulette Wheel Animation.mp4" type="video/mp4">
+                  </video>
                 </div>
             </div>
         </div>
