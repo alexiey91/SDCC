@@ -79,7 +79,7 @@
                     </div>
                     <table id="tabellone" class="table table-bordered tabellone" style="position: relative; top: -75px " >
         <tbody>
-                        <tr data-toggle="modal" data-target="#modale-puntata">
+                        <tr data-toggle="modal" data-target="#modale-puntata" >
                           <td id="0" rowspan="3" background='img/0.png' width="149px" height="225px" style='border: 1px solid transparent ; background-repeat: no-repeat ; border-right: 1px solid white '></td>
 
                           <!-- <th>#</th> -->
@@ -167,7 +167,8 @@
             </div>
         </div>
     </header>
-    <div class="modal fade" id="modale-puntata" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal fade " id="modale-puntata" tabindex="-1" role="dialog" aria-hidden="true" style="  position:absolute; top:50px; bottom:100px; left:100px; right:100px">
         <div class="modal-content" style="position:relative; top:20%;">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -178,23 +179,35 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body" align="center">
+                        <div class="modal-body " align="center">
                             <h2>Total bet on <span id="textModal"></span>:
                               <span id="tempModalQuote">0</span></h2>
                             <hr class="star-primary">
-                            <button class="modal-fiches"type="button" value="-1">-1</button>
-                            <button class="modal-fiches"type="button" value="1">1</button><br>
+                            <div class= 'col-lg-3'>
+                            <img class="img-responsive" src="img/Fiches_1.png" alt="">
+                            <button class="modal-fiches"type="button" value="-1" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true" style="color:white"></button>
+                            <button class="modal-fiches"type="button" value="1" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:white"></button><br>
+                          </div>
+                          <div class= 'col-lg-3'>
+                            <img class="img-responsive" src="img/Fiches_5.png" alt="">
 
-                            <button class="modal-fiches" type="button" value="-5">5</button>
-                            <button class="modal-fiches" type="button" value="5">5</button><br>
+                            <button class="modal-fiches " type="button" value="-5" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true"style="color:white" ></button>
+                            <button class="modal-fiches "  type="button" value="5" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true"style="color:white" ></button><br>
+                          </div>
+                          <div class= 'col-lg-3'>
+                            <img class="img-responsive" src="img/Fiches_10.png" alt="">
 
-                            <button class="modal-fiches" type="button" value="-10">-10</button>
-                            <button class="modal-fiches" type="button" value="10">10</button><br>
+                            <button class="modal-fiches" type="button" value="-10" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true"style="color:white" ></button>
+                            <button class="modal-fiches" type="button" value="10" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true"style="color:white" ></button><br>
+                          </div>
+                            <div class= 'col-lg-3'>
+                              <img class="img-responsive" src="img/Fiches_50.png" alt="">
 
-                            <button class="modal-fiches" type="button" value="-50">-50</button>
-                            <button class="modal-fiches" type="button" value="50">50</button><br><br>
-                            <button class="modal-fiches-confirm btn btn-default" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Confirm </button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button class="modal-fiches" type="button" value="-50" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-minus" aria-hidden="true"style="color:white" ></button>
+                            <button class="modal-fiches" type="button" value="50" style="background-color:#0e1a22; height:50px ;width:50px ; border-radius:25px; border-color:#0e1a22"><span class="glyphicon glyphicon-plus" aria-hidden="true"style="color:white" ></button><br><br>
+                          </div>
+                            <button class="modal-fiches-confirm btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Confirm </button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -217,7 +230,7 @@
                   <table class="table table-bordered">
                 <thead>
                     <tr>
-                      <td colspan="2"  style='background-repeat: no-repeat;background-position:center ; border: 3px solid #2C3E50; border-bottom: 5px solid #2C3E50 ' ><h2>Firs of all, choice the bet from the list belove and attend the exit of number from roulette.</h2>
+                      <td colspan="2"  style='background-repeat: no-repeat;background-position:center ; border: 3px solid #2C3E50; border-bottom: 3px solid #2C3E50 ' ><h2>Firs of all, choice the bet from the list belove and attend the exit of number from roulette.</h2>
                                         <h2>Let's Play and Good Luck</h2></td>
                     </tr>
                     <tr>
