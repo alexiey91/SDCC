@@ -112,5 +112,6 @@ $(".modal-fiches-confirm").click(function(){
 $('#confirmBet').click(function(){
 
     disableTable();
+    $('#totalCredit').prop('innerHTML',parseInt($('#totalCredit').prop('innerHTML'))- parseInt($('#totalBet').prop('innerHTML')));
 
 });
