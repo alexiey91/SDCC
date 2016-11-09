@@ -42,10 +42,12 @@ $('.tab a').on('click', function (e) {
 
 });
 
+
+
 $(".image-radio img").click(function(){
   console.log(this);
   $(this).prev().prop('checked', true);
- $('#zone_label').prop('innerHTML',$(this).prev().prop('value'));
+ $('#zone_label').prop('innerHTML',$(this).prev().prop('id'));
   // if($(this).prev().attr('id') == "imp2"){
   //   $("#imp1").prop('checked', false);
   //   $(this).prev().prop('checked', true);
@@ -57,6 +59,6 @@ $(".image-radio img").click(function(){
   //
   //   console.log("clicked $(#imp1)",$("#imp1"));
   // }
-  console.log($("#imp1").prop('checked'),$("#imp2").prop('checked'));
+  console.log($("#Eire").prop('checked'),$("#Frankfurt").prop('checked'));
 
   });
