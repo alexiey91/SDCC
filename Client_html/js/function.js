@@ -32,36 +32,44 @@ var gameChanger = function(actualState){
     case "Place your bets":
       $('#gamePhase').prop('value',actualState);
       activeTable();
+      $('#puntata').prop('innerHTML',null);
+      $('#totalBet').prop('innerHTML',null);
+      $('#totalBet').prev().prop('innerHTML',"Place you're bet");
       $('#confirmBetText').prop('innerHTML',null);
       $('#confirmBet').prop('disabled',null);
       $('#confirmBet').prop('hidden',true);
-
+//      $.cookie('gamePhase', 'Place your bets',{expires: 7});
       setTimeout(function(){
         gameChanger("Last bets");
       },10000)//25
       break;
     case "Last bets":
       $('#gamePhase').prop('value',actualState);
+      $.cookie('gamePhase', 'Last bets');
+
       setTimeout(function(){
-        gameChanger("No more bets")
+        gameChanger("No more bets");
       },5000);
       break;
     case "No more bets":
+      if ($("#modale-puntata").is(':visible')){
+        $('#modale-puntata').modal('toggle');
+      }
       $('#gamePhase').prop('value',actualState);
       $('#confirmBet').prop('disabled','disabled');
+      if($('#totalBet').prev().prop('innerHTML')=="Place you're bet")
+        $('#totalBet').prev().prop('innerHTML',"Wait next hand");
+
       noMoreBet();
       setTimeout(function(){
-        gameChanger("Payment")
+        gameChanger("Payment");
       },5000);
       break;
     case "Payment":
-      $('#gamePhase').prop('value',actualState);
       $('#modale-roulette').modal('toggle');//chiude il modale
-      $('#puntata').prop('innerHTML',null);
-      $('#totalBet').prop('innerHTML',null);
-      $('#totalBet').prev().prop('innerHTML',"Place you're bet");
+      $('#gamePhase').prop('value',actualState);
       setTimeout(function(){
-        gameChanger("Place your bets")
+        gameChanger("Place your bets");
       },3000);
       break;
   }
