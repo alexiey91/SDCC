@@ -32,6 +32,9 @@ var gameChanger = function(actualState){
     case "Place your bets":
       $('#gamePhase').prop('value',actualState);
       activeTable();
+      $('#puntata').prop('innerHTML',null);
+      $('#totalBet').prop('innerHTML',null);
+      $('#totalBet').prev().prop('innerHTML',"Place you're bet");
       $('#confirmBetText').prop('innerHTML',null);
       $('#confirmBet').prop('disabled',null);
       $('#confirmBet').prop('hidden',true);
@@ -49,22 +52,22 @@ var gameChanger = function(actualState){
       },5000);
       break;
     case "No more bets":
+      if ($("#modale-puntata").is(':visible')){
+        $('#modale-puntata').modal('toggle');
+      }
       $('#gamePhase').prop('value',actualState);
       $('#confirmBet').prop('disabled','disabled');
+      if($('#totalBet').prev().prop('innerHTML')=="Place you're bet")
+        $('#totalBet').prev().prop('innerHTML',"Wait next hand");
+
       noMoreBet();
       setTimeout(function(){
         gameChanger("Payment");
       },5000);
       break;
     case "Payment":
-      if ($("#modale-puntata").data('bs.modal') && $("element").data('bs.modal').isShown){
-        $('modale-puntata').modal('toggle');
-      }
       $('#modale-roulette').modal('toggle');//chiude il modale
       $('#gamePhase').prop('value',actualState);
-      $('#puntata').prop('innerHTML',null);
-      $('#totalBet').prop('innerHTML',null);
-      $('#totalBet').prev().prop('innerHTML',"Place you're bet");
       setTimeout(function(){
         gameChanger("Place your bets");
       },3000);
