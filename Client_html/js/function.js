@@ -63,7 +63,7 @@ var gameChanger = function(actualState){
       noMoreBet();
       setTimeout(function(){
         gameChanger("Payment");
-      },5000);
+      },10000);
       break;
     case "Payment":
       $('#modale-roulette').modal('toggle');//chiude il modale
