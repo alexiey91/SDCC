@@ -24,7 +24,7 @@ function simpleBet(type, num) {
 
         case util.constants.PAIR:
 
-            return 2 * (num % 2 === 0);
+            return 2 * (num % 2 === 0 && num !== 0);
 
         case util.constants.IMPAIR:
 
