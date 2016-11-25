@@ -23,7 +23,7 @@ quest’ultimo requisito occorre adottare opportune tecniche di replicazione del
 su molteplici nodi del sistema. Si descriva nella relazione quale tipo di scalabilità (rispetto alla
 dimensione, geografica) viene soddisfatta dal sistema realizzato, motivando opportunamente la scelta
 e le soluzioni adottate; si descrivano inoltre quali soluzioni sono state adottate per garantire un’elevata
-affidabilita/disponibilità.
+affidabilità/disponibilità.
 - *Usare un protocollo di consenso distribuito per mantenere uno stato condiviso consistente tra le moltiplici
 repliche, ovvero l’algoritmo di Paxos esaminato a lezione o sue varianti* (ad es. Fast Paxos),
 *oppure altri protocolli di consenso proposti recentemente, in particolare Raft*.
