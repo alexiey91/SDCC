@@ -19,8 +19,7 @@ process.once('message', m => {
         // Do some operation
 
         setTimeout(() => {
-          snsapi.publishStringMessage('arn:aws:sns:eu-west-1:993460052932:computed', 'eire', 'eu-west-1');
-          process.send('done');
+          
             redis.hgetall('HSET:Bets', function (err, resp) {
                     console.log('hgetall command returns err: %s, resp: ', err, resp);
 
