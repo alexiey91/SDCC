@@ -254,7 +254,7 @@ var recurseSend = function (nextTok, endpoint, recursiveCount, sns, daily) {
               from: 'bellagio.casino.sdcc@gmail.com', // sender address
               to: endpoint, // list of receivers
               subject: 'Daily Number', // Subject line
-              text: "il numero di oggi è " + daily + " !" //, // plaintext body
+              text: daily //, // plaintext body
             };
             transporter.sendMail(mailOptions, function (error, info) {
               if (error) {
