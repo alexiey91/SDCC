@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  25 NOV 2016 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  26 NOV 2016 12:51
 entering extended mode
 **sig-alternate-sample.tex
 (sig-alternate-sample.tex
@@ -246,124 +246,168 @@ LaTeX Font Info:    ... okay on input line 51.
 \MPnumerator=\count115
 \makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks39
-)
-Runaway argument?
-{ \alignauthor Agostini Stefano\\ \email {agostinistefano1991@gmail.c\ETC.
-! Paragraph ended before \author was complete.
-<to be read again> 
-                   \par 
-l.131 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+) Excluding 'comment' comment.
+LaTeX Font Info:    Try loading font information for U+msa on input line 158.
 
-! Misplaced \crcr.
-\endtabular ->\crcr 
-                    \egroup \egroup $\egroup 
-l.133       \and
-                
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Too many }'s.
-\endtabular ->\crcr \egroup 
-                            \egroup $\egroup 
-l.133       \and
-                
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-! Too many }'s.
-\endtabular ->\crcr \egroup \egroup 
-                                    $\egroup 
-l.133       \and
-                
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 133.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+LaTeX Font Info:    Try loading font information for U+msb on input line 158.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 133.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 158.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.133       \and
-                
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 158.
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+Overfull \hbox (1.0793pt too wide) in paragraph at lines 160--169
+\T1/aer/m/it/9 Prepar-ing ACM SIG Pro-ceed-ings Us-ing L[]T[]X$\OT1/cmr/m/n/9 2
+[]$ \T1/aer/m/it/9 and BibT[]X\T1/aer/m/n/9 .
+ []
 
-! LaTeX Error: \begin{document} ended by \end{tabular}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.133       \and
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.133       \and
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.133       \and
-                
-Things are pretty mixed up, but I think the worst is over.
-
-
-Overfull \hbox (53.46599pt too wide) in paragraph at lines 138--139
- []\eaddfnt alessandro.valenti1991@gmail.com| 
+Excluding 'comment' comment.
+Overfull \hbox (7.49287pt too wide) in paragraph at lines 239--245
+\T1/aer/m/n/9 zione di molti dati, con-cen-tran-dosi prin-ci-pal-mente sullo sv
+ilup-
  []
 
 
-LaTeX Warning: No \author given.
+Overfull \hbox (3.23618pt too wide) in paragraph at lines 253--257
+\T1/aer/m/n/9 tendono risorse con-di-vise, sup-porta l'aggiornamento in tempo
+ []
 
 
-! LaTeX Error: Not in outer par mode.
+Overfull \hbox (2.02312pt too wide) in paragraph at lines 261--263
+[]\T1/aer/m/n/9 In questa sezione verrá de-scritta nel det-taglio l'architettur
+a
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154 \maketitle
-                
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[1{C:/Users/alessandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-! Undefined control sequence.
-\@xfloat ...@fltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.154 \maketitle
-                
-The control sequence at the end of the top line
+
+]
+<architettura_generale.png, id=15, 600.2425pt x 474.77374pt>
+File: architettura_generale.png Graphic file (type png)
+
+<use architettura_generale.png>
+Package pdftex.def Info: architettura_generale.png used on input line 277.
+(pdftex.def)             Requested size: 240.09274pt x 189.90613pt.
+
+Overfull \hbox (1.99411pt too wide) in paragraph at lines 280--281
+\T1/aer/m/n/9 ma an-che eco-nomici, riguardanti lo sviluppo dell'applicazione
+ []
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 301.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 321.
+
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 336.
+
+
+LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
+ line 363.
+
+
+LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 3
+63.
+
+
+LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
+e 363.
+
+
+LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
+put line 363.
+
+
+LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 3
+64.
+
+
+LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
+ine 365.
+
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 365.
+
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 371.
+
+[2 <./architettura_generale.png>]
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 382.
+
+
+LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
+(Font)              using `T1/aett/m/n' instead on input line 467.
+
+\c@theorem=\count117
+\c@definition=\count118
+
+Overfull \hbox (15.60826pt too wide) detected at line 544
+\OML/cmm/m/it/9 l \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm
+/m/it/9 x\OT1/cmr/m/n/9 ) = [] [] = [] \OML/cmm/m/it/9 g\OT1/cmr/m/n/9 (\OML/cm
+m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9  [] [] \OT1/cmr/m/n/9 = 0 \OMS/cmsy
+/m/n/9  \OML/cmm/m/it/9 L \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 ;
+ []
+
+
+LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
+ine 554.
+
+[3]
+No file sig-alternate-sample.bbl.
+[4] (sig-alternate-sample.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2891 strings out of 493673
+ 35087 string characters out of 3143946
+ 108667 words of memory out of 3000000
+ 6148 multiletter control sequences out of 15000+200000
+ 66203 words of font info for 95 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 41i,10n,34p,556b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helve
+tic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on sig-alternate-sample.pdf (4 pages, 252981 bytes).
+PDF statistics:
+ 95 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

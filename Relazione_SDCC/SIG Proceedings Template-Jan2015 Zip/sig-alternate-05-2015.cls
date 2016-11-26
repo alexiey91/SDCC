@@ -168,7 +168,7 @@
 \newcommand\printccsdesc{%
   \ifx\@concepts\@empty\else
   \if@twocolumn
-    \section*{CCS Concepts}
+    \section{CCS Concepts}
     \@concepts
     \else \small
     \quotation{\@concepts}%

@@ -51,7 +51,7 @@
 \begin{document}
 
 % Copyright
-\setcopyright{acmcopyright}
+%\setcopyright{acmcopyright}
 %\setcopyright{acmlicensed}
 %\setcopyright{rightsretained}
 %\setcopyright{usgov}
@@ -60,24 +60,23 @@
 %\setcopyright{cagovmixed}
 
 
-% DOI
-\doi{10.475/123_4}
 
+\begin{comment}
 % ISBN
-\isbn{123-4567-24-567/08/06}
+%\isbn{123-4567-24-567/08/06}
 
 %Conference
-\conferenceinfo{PLDI '13}{June 16--19, 2013, Seattle, WA, USA}
+%\conferenceinfo{PLDI '13}{June 16--19, 2013, Seattle, WA, USA}
 
-\acmPrice{\$15.00}
+%\acmPrice{\$15.00}
 
 %
 % --- Author Metadata here ---
-\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+%\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
 %\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
-
+\end{comment}
 \title{Your Own Distributed System using Consensus Protocols}
 \subtitle{Bellagio Casin\'o roulette multiplayer}
 %
@@ -105,7 +104,7 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{3} %  in this sample file, there are a *total*
+\numberofauthors{2} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
@@ -122,39 +121,42 @@
 %
 % 1st. author
 \alignauthor
-Agostini Stefano\\
+Stefano Agostini\\
+      % \affaddr{Institute for Clarity in Documentation}\\
+      % \affaddr{1932 Wallamaloo Lane}\\
+       %\affaddr{Wallamaloo, New Zealand}\\
        \email{agostinistefano1991@gmail.com}
-       \and
+\and
 % 2nd. author
 \alignauthor
-Salom\'e Paolo\\
-       
-      \email{paolosalome@gmail.com}
-      \and
+		Salom\'e Paolo\\      
+       %\affaddr{Institute for Clarity in Documentation}\\
+       %\affaddr{P.O. Box 1212}\\
+       %\affaddr{Dublin, Ohio 43017-6221}\\
+       \email{paolosalome@gmail.com}
+       \and
 % 3rd. author
-\alignauthor
-Alessandro Valenti\\
-       
-      \email{alessandro.valenti1991@gmail.com}
- \and  % use '\and' if you need 'another row' of author names
-
+\alignauthor Valenti Alessandro\\
+       %\affaddr{The Th{\o}rv{\"a}ld Group}\\
+       %\affaddr{1 Th{\o}rv{\"a}ld Circle}\\
+       %\affaddr{Hekla, Iceland}\\
+       \email{alessandro.valenti1991@gmail.com}
+\and
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
 % for aesthetic reasons that you place these 'additional authors'
 % in the \additional authors block, viz.
-\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
-email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
-\date{30 July 1999}
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+%\date{30 July 1999}
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
 % number that will appear in the \additionalauthors section.
 
 \maketitle
 \begin{abstract}
-
-
 This paper provides a sample of a \LaTeX\ document which conforms,
 somewhat loosely, to the formatting guidelines for
 ACM SIG Proceedings. It is an {\em alternate} style which produces
@@ -185,7 +187,9 @@ is available on the web page to help you with the
 % http://dl.acm.org/ccs.cfm
 % Please copy and paste the code instead of the example below. 
 %
-\begin{CCSXML}
+\begin{comment}
+
+{CCSXML}
 <ccs2012>
  <concept>
   <concept_id>10010520.10010553.10010562</concept_id>
@@ -229,62 +233,69 @@ is available on the web page to help you with the
 %\terms{Theory}
 
 \keywords{ACM proceedings; \LaTeX; text tagging}
+\end{comment}
 
-\section{Introduction}
+\section{Introduzione}
+Le tecnologie Cloud, esplose in questi ultimi anni, hanno permesso di trasferire il peso della computazione e dell'ap-provvigionamento delle risorse informatiche verso internet. Perci\'o la rete come strumento di sviluppo oggi offre scenari ampi nella direzione della distribuzione delle risorse e della computazione: la distribuzione, come nel caso che poniamo in esame, deve rappresentare un'avanguardia per lo sviluppo di applicazioni con caratteristiche di scalabilit\'a e di alta disponibilit\'a per l'utente finale. 
+Gli sviluppatori utilizzando i servizi cloud possono gestire in maniera semplificata l'immagazzinamento di informazioni e l'elaborazione di molti dati, concentrandosi principalmente sullo sviluppo della loro applicazione piuttosto che nell'utilizzo di un sistema ortodosso e dispendioso come avveniva nel passato.
+Aziende come Spotify Netflix ed altre sfruttano il servizio cloud per rendere fruibile le loro applicazioni agli utenti di tutto il mondo, ottenendo molteplici consensi.
+Gli sviluppatori utilizzando i servizi cloud possono gestire in maniera semplificata l'immagazzinamento di informazioni e l'elabora-zione di molti dati, concentrandosi principalmente sullo svilup-po della loro applicazione piuttosto che nell'utilizzo di un sistema ortodosso e dispendioso come avveniva nel passato.
+Aziende come Spotify Netflix ed altre sfruttano il servizio cloud per rendere fruibile le loro applicazioni agli utenti di tutto il mondo, ottenendo molteplici consensi.
+Molte persone all'interno del mondo non sanno che queste applicazioni sono cos\'i efficienti proprio perch\'e sfruttano una tecnologia cloud, che per quanto possa agevolare gli utenti e gli sviluppatori, presenta sempre qualche difficolt\'a da gestire:
+\begin{enumerate}
+\item garantire l'accesso concorrente ad una vasta molteplicit\'a di utenti.
+\item la possibilit\'a di connettersi da ogni angolo del mondo, senza ledere la qualit\'a del servizio.
+\item la sincronizzazione degli eventi associati ad ogni applicativo.
+\item la reperibilit\'a dei dati.
+\end{enumerate}
 
-Descrizione di un sistema distribuito
+\subsection{Obiettivi}
+L'obiettivo preposto consiste nell'elaborare un gioco multiplayer che supporta molteplici entit\'a autonome che si contendono risorse condivise, supporta l'aggiornamento in tempo reale di una qualche forma di stato condiviso, distribuisce su molteplici nodi (eventualmente distribuiti geograficamente) e la scalabili\'a.
+E' proprio con l'obiettivo di rispettare tali punti cardine che abbiamo proceduto nello sviluppo della nostra applicazione distribuita sulla piattaforma Cloud: abbiamo operato nell'intenzione di venire incontro alle esigenze degli utenti, sempre pi\'u abituati ad avere interazioni costanti e ripetute con le applicazioni di uso comune.
+Il Bellagio Casin\'o \'e l'applicazione (accessibile mediante interfaccia Web) da noi proposta che consente agli utenti di giocare ad una versione semplificata di una roulette francese condividendo un unico tavolo di gioco.
+Tale applicazione permette all'utente di effettuare particolari puntate in base alla propria disponibilit\'a di credito, sul tavolo condiviso.
+
+
+\section{Architettura}
+
+In questa sezione verr\'a descritta nel dettaglio l'architettura progettata sia a livello logico che a livello implementativo descrivendo i servizi Amazon utilizzati e i moduli sviluppati.
+L'architettura da noi elaborata e proposta \'e costituita da:
+\begin{itemize}
+\item un cluster di istanze EC2 situato nella regione Francoforte.
+\item due cluster di istanze EC2 situate nella regione Eire.
+\end{itemize}
+
+e sfrutta i servizi AWS:
+\begin{itemize}
+\item SNS per la comunicazione inter-cluster.
+\item DynamoDB per la persistenza dei dati situato nella regione Eire.
+\item Redis per supportare la logica del gioco situato sia nella regione Eire che Francoforte.
+\item LoadBalancer per distribuire il carico. 
+\end{itemize}
+
+\begin{figure}\centering
+ \includegraphics[scale=0.4]{architettura_generale} 
+ \caption{didascalia} \label{nome} 
+ \end{figure}
+Abbiamo progettato il nostro sistema con lo scopo di soddisfare il requisito di scalabilit\'a geografica.Per tale motivo abbiamo distribuito i cluster del nostro sistema nelle due aree geografiche europee. Ci\'o non toglie che tale realizzazione si possa estendere anche all'interno di altre regioni geografiche messe a disposizione da AWS. La motivazione che ci ha spinto a questa scelta \'e legata a fattori di latenza ma anche economici, riguardanti lo sviluppo dell'applicazione stessa e il testing.
+
+I cluster istanziati sono soggetti ad una gerarchia dettata dalla realizzazione di uno stato condivisibile, che corrisponde alle fasi di gioco dell'applicazione. Pertanto possiamo individuare i cluster di gioco (situati uno in Irlanda e l'altro a Francoforte) ed il cluster di controllo che genera l'avanzamento dello stato e che svolge anche la funzione di login e registrazione (situato in Irlanda).
 
 
 
-The \textit{proceedings} are the records of a conference.
-ACM seeks to give these conference by-products a uniform,
-high-quality appearance.  To do this, ACM has some rigid
-requirements for the format of the proceedings documents: there
-is a specified format (balanced  double columns), a specified
-set of fonts (Arial or Helvetica and Times Roman) in
-certain specified sizes (for instance, 9 point for body copy),
-a specified live area (18 $\times$ 23.5 cm [7" $\times$ 9.25"]) centered on
-the page, specified size of margins (1.9 cm [0.75"]) top, (2.54 cm [1"]) bottom
-and (1.9 cm [.75"]) left and right; specified column width
-(8.45 cm [3.33"]) and gutter size (.83 cm [.33"]).
+\subsection{Cluster EC2}
+All'interno di questa sezione andiamo a trattare nel dettaglio quali sono le funzionalit\'a e le componenti dei Cluster EC2.
 
-The good news is, with only a handful of manual
-settings\footnote{Two of these, the {\texttt{\char'134 numberofauthors}}
-and {\texttt{\char'134 alignauthor}} commands, you have
-already used; another, {\texttt{\char'134 balancecolumns}}, will
-be used in your very last run of \LaTeX\ to ensure
-balanced column heights on the last page.}, the \LaTeX\ document
-class file handles all of this for you.
 
-The remainder of this document is concerned with showing, in
-the context of an ``actual'' document, the \LaTeX\ commands
-specifically available for denoting the structure of a
-proceedings paper, rather than with giving rigorous descriptions
-or explanations of such commands.
 
-\section{The {\secit Body} of The Paper}
-Typically, the body of a paper is organized
-into a hierarchical structure, with numbered or unnumbered
-headings for sections, subsections, sub-subsections, and even
-smaller sections.  The command \texttt{{\char'134}section} that
-precedes this paragraph is part of such a
-hierarchy.\footnote{This is the second footnote.  It
-starts a series of three footnotes that add nothing
-informational, but just give an idea of how footnotes work
-and look. It is a wordy one, just so you see
-how a longish one plays out.} \LaTeX\ handles the numbering
-and placement of these headings for you, when you use
-the appropriate heading commands around the titles
-of the headings.  If you want a sub-subsection or
-smaller part to be unnumbered in your output, simply append an
-asterisk to the command name.  Examples of both
-numbered and unnumbered headings will appear throughout the
-balance of this sample document.
 
-Because the entire article is contained in
-the \textbf{document} environment, you can indicate the
-start of a new paragraph with a blank line in your
-input file; that is why this sentence forms a separate paragraph.
+
+
+
+
+
+
+
 
 \subsection{Type Changes and {\subsecit Special} Characters}
 We have already seen several typeface changes in this sample.  You
