@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  26 NOV 2016 12:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  26 NOV 2016 19:15
 entering extended mode
 **sig-alternate-sample.tex
 (sig-alternate-sample.tex
@@ -273,95 +273,94 @@ Overfull \hbox (1.0793pt too wide) in paragraph at lines 160--169
  []
 
 Excluding 'comment' comment.
-Overfull \hbox (7.49287pt too wide) in paragraph at lines 239--245
-\T1/aer/m/n/9 zione di molti dati, con-cen-tran-dosi prin-ci-pal-mente sullo sv
-ilup-
- []
-
-
-Overfull \hbox (3.23618pt too wide) in paragraph at lines 253--257
-\T1/aer/m/n/9 tendono risorse con-di-vise, sup-porta l'aggiornamento in tempo
- []
-
-
-Overfull \hbox (2.02312pt too wide) in paragraph at lines 261--263
-[]\T1/aer/m/n/9 In questa sezione verrá de-scritta nel det-taglio l'architettur
-a
+Overfull \hbox (7.84561pt too wide) in paragraph at lines 251--255
+\T1/aer/m/n/9 sviluppo della nos-tra ap-pli-cazione dis-tribuita sulla pi-attaf
+orma
  []
 
 [1{C:/Users/alessandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-<architettura_generale.png, id=15, 600.2425pt x 474.77374pt>
+<architettura_generale.png, id=16, 600.2425pt x 474.77374pt>
 File: architettura_generale.png Graphic file (type png)
 
 <use architettura_generale.png>
-Package pdftex.def Info: architettura_generale.png used on input line 277.
+Package pdftex.def Info: architettura_generale.png used on input line 276.
 (pdftex.def)             Requested size: 240.09274pt x 189.90613pt.
+ Excluding 'comment' comment.
+Overfull \hbox (3.38927pt too wide) in paragraph at lines 315--317
+\T1/aer/m/n/9 stesura del pro-getto, dalla pro-get-tazione all'implementazione,
 
-Overfull \hbox (1.99411pt too wide) in paragraph at lines 280--281
-\T1/aer/m/n/9 ma an-che eco-nomici, riguardanti lo sviluppo dell'applicazione
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 301.
+
+Overfull \hbox (13.40724pt too wide) in paragraph at lines 318--320
+\T1/aer/m/n/9 cos-ti-tuita da una sin-gola pag-ina HTML con con-tenuti Javascri
+pt
+ []
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 332.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+ [2 <./architettura_generale.png>]
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 321.
+ne 352.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 336.
+ne 367.
 
 
 LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
- line 363.
+ line 394.
 
 
 LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 3
-63.
+94.
 
 
 LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
-e 363.
+e 394.
 
 
 LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
-put line 363.
+put line 394.
 
 
 LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 3
-64.
+95.
 
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 365.
+ine 396.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 365.
+ne 396.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 371.
+ne 402.
 
-[2 <./architettura_generale.png>]
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 382.
+ne 413.
 
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 467.
+(Font)              using `T1/aett/m/n' instead on input line 498.
 
+[3]
 \c@theorem=\count117
 \c@definition=\count118
 
-Overfull \hbox (15.60826pt too wide) detected at line 544
+Overfull \hbox (15.60826pt too wide) detected at line 575
 \OML/cmm/m/it/9 l \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm
 /m/it/9 x\OT1/cmr/m/n/9 ) = [] [] = [] \OML/cmm/m/it/9 g\OT1/cmr/m/n/9 (\OML/cm
 m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9  [] [] \OT1/cmr/m/n/9 = 0 \OMS/cmsy
@@ -370,11 +369,12 @@ m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9  [] [] \OT1/cmr/m/n/9 = 0 \OMS/cmsy
 
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 554.
+ine 585.
 
-[3]
 No file sig-alternate-sample.bbl.
-[4] (sig-alternate-sample.aux)
+[4] [5
+
+] (sig-alternate-sample.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -386,7 +386,7 @@ Here is how much of TeX's memory you used:
  6148 multiletter control sequences out of 15000+200000
  66203 words of font info for 95 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,10n,34p,556b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,34p,679b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fon
@@ -405,9 +405,9 @@ tic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb
 s/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on sig-alternate-sample.pdf (4 pages, 252981 bytes).
+Output written on sig-alternate-sample.pdf (5 pages, 257579 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
