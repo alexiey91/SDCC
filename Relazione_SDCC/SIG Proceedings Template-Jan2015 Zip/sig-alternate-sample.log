@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  27 NOV 2016 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  27 NOV 2016 18:52
 entering extended mode
 **sig-alternate-sample.tex
 (sig-alternate-sample.tex
@@ -224,18 +224,18 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 LaTeX Warning: Label `nome' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
 
 (C:\Users\alessandro\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -251,135 +251,146 @@ LaTeX Font Info:    ... okay on input line 51.
 \makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks39
 ) Excluding 'comment' comment.
-LaTeX Font Info:    Try loading font information for U+msa on input line 158.
+LaTeX Font Info:    Try loading font information for U+msa on input line 161.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 158.
+LaTeX Font Info:    Try loading font information for U+msb on input line 161.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 158.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 161.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 158.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-)
-Overfull \hbox (1.0793pt too wide) in paragraph at lines 160--169
+Overfull \hbox (1.0793pt too wide) in paragraph at lines 164--173
 \T1/aer/m/it/9 Prepar-ing ACM SIG Pro-ceed-ings Us-ing L[]T[]X$\OT1/cmr/m/n/9 2
 []$ \T1/aer/m/it/9 and BibT[]X\T1/aer/m/n/9 .
  []
 
 Excluding 'comment' comment.
-Overfull \hbox (7.84561pt too wide) in paragraph at lines 251--255
+Overfull \hbox (7.84561pt too wide) in paragraph at lines 259--263
 \T1/aer/m/n/9 sviluppo della nos-tra ap-pli-cazione dis-tribuita sulla pi-attaf
 orma
  []
 
-[1{C:/Users/alessandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-<architettura_generale.png, id=16, 600.2425pt x 474.77374pt>
+<architettura_generale.png, id=1, 600.2425pt x 474.77374pt>
 File: architettura_generale.png Graphic file (type png)
 
 <use architettura_generale.png>
-Package pdftex.def Info: architettura_generale.png used on input line 276.
+Package pdftex.def Info: architettura_generale.png used on input line 285.
 (pdftex.def)             Requested size: 240.09274pt x 189.90613pt.
- Excluding 'comment' comment.
-Overfull \hbox (3.38927pt too wide) in paragraph at lines 315--317
+ [1{C:/Users/alessandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+] Excluding 'comment' comment.
+Overfull \hbox (3.38927pt too wide) in paragraph at lines 329--331
 \T1/aer/m/n/9 stesura del pro-getto, dalla pro-get-tazione all'implementazione,
 
  []
 
 
-Overfull \hbox (13.37128pt too wide) in paragraph at lines 318--320
+Overfull \hbox (13.37128pt too wide) in paragraph at lines 334--336
 \T1/aer/m/n/9 cos-ti-tuita da una sin-gola pag-ina \T1/aer/m/it/9 HTML \T1/aer/
 m/n/9 con con-tenuti \T1/aer/m/it/9 Javascript
  []
 
 [2 <./architettura_generale.png>]
-Overfull \hbox (9.02611pt too wide) in paragraph at lines 337--338
+Overfull \hbox (9.02611pt too wide) in paragraph at lines 357--358
 []\T1/aer/m/n/9 Comunicazione \T1/aer/m/it/9 inter-Cluster\T1/aer/m/n/9 : Sfrut
 -ti-amo il servizio \T1/aer/m/it/9 AWS
  []
 
 
-Overfull \hbox (2.36475pt too wide) in paragraph at lines 365--367
+Overfull \hbox (1.5437pt too wide) in paragraph at lines 380--381
+\T1/aer/m/n/9 pun-tate degli utenti, ren-dendo tali dati ac-ces-si-bili per l'e
+labo-
+ []
+
+
+Overfull \hbox (2.36475pt too wide) in paragraph at lines 387--389
 \T1/aer/m/n/9 Quando un'applicazione ef-fet-tua delle scrit-ture su una tabella
 
  []
 
-<Database.png, id=24, 445.665pt x 189.70876pt>
+<Database.png, id=22, 445.665pt x 189.70876pt>
 File: Database.png Graphic file (type png)
  <use Database.png>
-Package pdftex.def Info: Database.png used on input line 370.
+Package pdftex.def Info: Database.png used on input line 394.
 (pdftex.def)             Requested size: 222.83195pt x 94.85414pt.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 376.
 
+<Stati_del_sistema.png, id=23, 586.19pt x 287.0725pt>
+File: Stati_del_sistema.png Graphic file (type png)
+
+<use Stati_del_sistema.png>
+Package pdftex.def Info: Stati_del_sistema.png used on input line 421.
+(pdftex.def)             Requested size: 234.47185pt x 114.82695pt.
+ [3 <./Database.png>]
+Overfull \hbox (2.00499pt too wide) in paragraph at lines 431--434
+\T1/aer/m/n/9 com-pone di un leader e di due peer(follower). Tale definizione
+ []
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 452.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 396.
+ne 472.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 411.
+ne 487.
 
-[3 <./Database.png>]
 
 LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
- line 438.
+ line 514.
 
 
-LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 4
-38.
+LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
+14.
 
 
 LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
-e 438.
+e 514.
 
 
 LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
-put line 438.
+put line 514.
 
 
-LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 4
-39.
+LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
+15.
 
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 440.
+ine 516.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 440.
+ne 516.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 446.
+ne 522.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 457.
+ne 533.
 
+[4 <./Stati_del_sistema.png>]
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 542.
+(Font)              using `T1/aett/m/n' instead on input line 618.
 
 \c@theorem=\count117
 \c@definition=\count118
-[4]
-Overfull \hbox (15.60826pt too wide) detected at line 619
+
+Overfull \hbox (15.60826pt too wide) detected at line 695
 \OML/cmm/m/it/9 l \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm
 /m/it/9 x\OT1/cmr/m/n/9 ) = [] [] = [] \OML/cmm/m/it/9 g\OT1/cmr/m/n/9 (\OML/cm
 m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9  [] [] \OT1/cmr/m/n/9 = 0 \OMS/cmsy
@@ -388,12 +399,11 @@ m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9  [] [] \OT1/cmr/m/n/9 = 0 \OMS/cmsy
 
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 629.
+ine 705.
 
+[5]
 No file sig-alternate-sample.bbl.
-[5] [6
-
-] (sig-alternate-sample.aux)
+[6] (sig-alternate-sample.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -402,34 +412,32 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2896 strings out of 493673
- 35166 string characters out of 3143946
- 108706 words of memory out of 3000000
- 6152 multiletter control sequences out of 15000+200000
- 66203 words of font info for 95 fonts, out of 3000000 for 9000
+ 2853 strings out of 493673
+ 34688 string characters out of 3143946
+ 108561 words of memory out of 3000000
+ 6121 multiletter control sequences out of 15000+200000
+ 59682 words of font info for 83 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,10n,34p,694b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,34p,694b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helve
-tic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on sig-alternate-sample.pdf (6 pages, 280062 bytes).
+ts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/
+uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sig-alternate-sample.pdf (6 pages, 284133 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

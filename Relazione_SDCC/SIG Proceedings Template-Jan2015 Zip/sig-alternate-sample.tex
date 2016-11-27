@@ -47,6 +47,9 @@
 
 \documentclass{sig-alternate-05-2015}
 
+\makeatletter
+\def\@copyrightspace{\relax}
+\makeatother 
 
 \begin{document}
 
@@ -157,6 +160,7 @@ Stefano Agostini\\
 
 \maketitle
 \begin{abstract}
+
 This paper provides a sample of a \LaTeX\ document which conforms,
 somewhat loosely, to the formatting guidelines for
 ACM SIG Proceedings. It is an {\em alternate} style which produces
@@ -236,6 +240,8 @@ is available on the web page to help you with the
 \end{comment}
 
 \section{Introduzione}
+
+
 Le tecnologie Cloud, esplose in questi ultimi anni, hanno permesso di trasferire il peso della computazione e dell'ap-provvigionamento delle risorse informatiche verso internet. Perci\'o la rete come strumento di sviluppo oggi offre scenari ampi nella direzione della distribuzione delle risorse e della computazione: la distribuzione, come nel caso che poniamo in esame, deve rappresentare un'avanguardia per lo sviluppo di applicazioni con caratteristiche di scalabilit\'a e di alta disponibilit\'a per l'utente finale. 
 Gli sviluppatori utilizzando i servizi cloud possono gestire in maniera semplificata l'immagazzinamento di informazioni e l'elaborazione di molti dati, concentrandosi principalmente sullo sviluppo della loro applicazione piuttosto che nell'utilizzo di un sistema ortodosso e dispendioso come avveniva nel passato.
 Aziende come \textit{Spotify}, \textit{Netflix} ed altre sfruttano il servizio cloud per rendere fruibile le loro applicazioni agli utenti di tutto il mondo, ottenendo molteplici consensi.
@@ -248,6 +254,8 @@ Molte persone all'interno del mondo non sanno che queste applicazioni sono cos\'
 \end{enumerate}
 
 \subsection{Obiettivi}
+
+
 L'obiettivo preposto consiste nell'elaborare un gioco multiplayer che supporta molteplici entit\'a autonome che si contendono risorse condivise, l'aggiornamento in tempo reale di una qualche forma di stato condiviso, essere distribuito su molteplici nodi (eventualmente distribuiti geograficamente) e supportare la scalabilit\'a.
 E' proprio con l'obiettivo di rispettare tali punti cardine che abbiamo proceduto nello sviluppo della nostra applicazione distribuita sulla piattaforma Cloud: abbiamo operato nell'intenzione di venire incontro alle esigenze degli utenti, sempre pi\'u abituati ad avere interazioni costanti e ripetute con le applicazioni di uso comune.
 Il \textit{Bellagio Casin\'o} \'e l'applicazione (accessibile mediante interfaccia Web) da noi proposta che consente agli utenti di giocare ad una versione semplificata di una roulette francese condividendo un unico tavolo di gioco.
@@ -255,6 +263,7 @@ Tale applicazione permette di effettuare particolari puntate in base alla propri
 
 
 \section{Architettura}
+
 
 In questa sezione verr\'a illustrata a livello logico la nostra architettura descrivendo i servizi \textit{Amazon} utilizzati e i moduli sviluppati.
 I componenti architetturali sono:
@@ -284,6 +293,8 @@ Ci\'o non toglie che tale realizzazione si possa estendere anche all'interno di 
 
 
 \subsection{Cluster EC2}
+
+
 All'interno di questa sezione andiamo a trattare nel dettaglio quali sono le funzionalit\'a e le componenti dei Cluster \textit{EC2}.
 
 I Cluster istanziati sono soggetti ad una gerarchia dettata dalla realizzazione di uno stato condivisibile, che corrisponde alle fasi di gioco dell'applicazione.
@@ -304,6 +315,7 @@ Sfrutta il servizio offerto da DynamoDB per memorizzare i dati di registrazione 
 
 \subsubsection{Frankfurt/Eire Cluster}
 
+
 Entrambi i Cluster svolgono le medesime attivit\'a, in quanto ricevono entrambi gli aggiornamenti dello stato attraverso il servizio di SNS.
 Raccolgono le azioni di gioco prodotte dagli utenti durante le fasi di gioco, salvandole momentaneamente all'interno dell'apposita cache, la quale sfrutta il servizio Redis. 
 Contattano il servizio DynamoDB per ottenere sempre i dati aggiornati dei vari giocatori, successivamente notificano al SuperLeader Cluster il completamento dell'esecuzione della fase.
@@ -312,13 +324,19 @@ Contattano il servizio DynamoDB per ottenere sempre i dati aggiornati dei vari g
 
 \section{Implementazione}
 \subsection{Metodologie di sviluppo}
+
+
 L'intero progetto \'e stato realizzato seguendo la metodologia di sviluppo \textit{Scrum}, la quale prevede di dividere il progetto in blocchi rapidi di lavoro(Sprint), alla fine di ciascuno dei quali si deve creare un incremento del software. L'intera stesura del progetto, dalla progettazione all'implementazione, \'e stata quindi suddivisa in sprint con scadenza molto stretta assegnati ai singoli componenti del team. 
 Per la suddivisione dei task sono stati effettuati incontri giornalieri, mentre per la sincronizzazione e per il controllo di versione \'e stato utilizzato il servizio di \textit{Google Drive}. Il periodo di sviluppo, \'e stato caratterizzato da incontri giornalieri (Daily Scrum) incentrati sulla tematica del giorno, con la presenza del team al completo. A supporto dello sviluppo \'e stato previsto, fin dal primo istante, un ulteriore incontro prima della partenza di ogni nuovo sprint.La metodologia utilizzata si \'e dimostrata efficiente poich\'e ha permesso di progettare e realizzare un architettura ben congegnata in un arco temporale ridotto.
 \subsection{Tecnologie utilizzate}
-Il progetto \'e stato interamente realizzato utilizzando il framework \textit{Node.js}, che consente di sfruttare il linguaggio \textit{JavaScript}, tipicamente utilizzato nella client-side, anche per la scrittura di applicazioni server-side. La caratteristica principale di \textit{Node.js} risiede nella possibilit\'a di accedere alle risorse del sistema operativo in modalit\'a event-driven evitando il modello basato su processi o thread concorrenti utilizzato dai classici web server. Per facilitare l'uso di \textit{Node.js} \'e stato utilizzato il framework \textit{Express.js}, per la realizzazione semplificata del middleware http.
+
+
+Il progetto \'e stato interamente realizzato utilizzando il framework \textit{Node.js}, che consente di sfruttare il linguaggio \textit{JavaScript}, tipicamente utilizzato nella client-side, anche per la scrittura di applicazioni server-side. La caratteristica principale di \textit{Node.js} risiede nella possibilit\'a di accedere alle risorse del sistema operativo in modalit\'a event-driven evitando il modello basato su processi o thread concorrenti utilizzato dai classici web server. Per facilitare l'uso di \textit{Node.js} \'e stato utilizzato il framework \textit{Express.js}, per la realizzazione semplificata del middleware \textit{HTTP}.
  L'applicazione client \'e costituita da una singola pagina \textit{HTML} con contenuti \textit{Javascript} ed elaborata attraverso l'uso della libreria \textit{JQuery} rendendo l'interfaccia dinamica e consistente e di facile utilizzo. 
 
 \subsection{Raft}
+
+
 \textit{Raft} \'e un protocollo del consenso in alternativa a \textit{Paxos} che offre la possibilit\'a di condividere uno stato comune tra i vari nodi del Cluster. Questi si suddividono in leader, candidate e follower. Viene raggiunto il consenso attraverso l'elezione di un leader, la cui mansione principale \'e quella di propagare il log dei cambiamenti di stato ai propri follower. Inoltre per ribadire la propria leadership deve informare periodicamente i propri follower attraverso dei brevi messaggi.
 Ogni follower deve ricevere questi messaggi all'interno di un arco temporale fissato. Se ci\'o non dovesse avvenire verr\'a richiesta una nuova elezione di leader; colui che indice la nuova elezione cambia il proprio ruolo in candidate. Per far s\'i che \textit{Raft} tolleri \begin{math} K \end{math} guasti occorrono almeno \begin{math} 2K+1 \end{math} nodi all'interno del Cluster.
 
@@ -331,6 +349,8 @@ In caso di un guasto ad una macchina, se questa risulta essere un leader quello 
 Nel caso di un guasto nei confronti di un follower bisogna monitorare il numero di nodi presenti nel Cluster, come precedentemente illustrato.
 
 \subsection{Comunicazione}
+
+
 Per quanto riguarda la comunicazione, vogliamo porre l'attenzione verso due tipologie presenti all'interno del nostro elaborato:
 \begin{itemize}
 \item Comunicazione \textit{intra-Cluster}: sfruttiamo le chiamate \textit{RPC}, come descritto nel paragrafo precedente.
@@ -349,13 +369,15 @@ La motivazione per cui \'e stato scelto questo servizio sono le seguenti:
 Generalmente \textit{SNS} viene utilizzato in abbinamento con \textit{SQS}, per\'o nel nostro caso non avevamo una necessit\'a di permanenza e di ordinamento dei messaggi.
 
 \subsection{Persistenza}
+
+
 Poich\'e la nostra applicazione \'e un gioco multiplayer e avendo necessit\'a di gestire la registrazione e l'accesso di pi\'u giocatori, ci occorre un servizio di persistenza dati. A tal proposito la persistenza \'e stata realizzata sfruttando due tipi di servizio:
 \begin{itemize}
 \item \textit{Redis}: \'e un servizio di cache distribuito di \textit{Amazon AWS}.
-\item \textit{DynamoDB}: \'e un database \textit{NoSQL} distribuito di \textit{Amazon AWS}.
+\item \textit{DynamoDB}:  \'e un database \textit{NoSQL} distribuito di \textit{Amazon AWS}.
 \end{itemize}
 
-Nel dettaglio \textit{Redis} viene sfruttato dai Cluster di gioco per poter immagazzinare le ultime informazioni relative alle puntate degli utenti, rendendo tali dati accessibili per l'elaborazione delle vincite da parte del sistema. Alla fine di questa operazione il sistema provveder\'a all'eliminazione di tali dati per permettere l'aggiornamento degli stessi coerentemente con la mano del gioco.
+Nel dettaglio \textit{Redis} viene sfruttato dai Cluster di gioco per poter immagazzinare le ultime informazioni relative alle puntate degli utenti, rendendo tali dati accessibili per l'elabo-razione delle vincite da parte del sistema. Alla fine di questa operazione il sistema provveder\'a all'eliminazione di tali dati per permettere l'aggiornamento degli stessi coerentemente con la mano del gioco.
 
 Per quanto concerne \textit{DynamoDB} sono state create due tabelle
 \begin{itemize}
@@ -365,11 +387,65 @@ Per quanto concerne \textit{DynamoDB} sono state create due tabelle
 Quando un'applicazione effettua delle scritture su una tabella in \textit{DynamoDB} i dati impiegano del tempo per propagarsi in ogni locazione di memoria della regione \textit{AWS} corrente. I dati saranno consistenti in tutte le locazioni di memoria in un periodo lungo \begin{math}\sim{~1}\end{math} sec o anche meno.
 Dato che la nostra applicazione non effettua chiamate al Database frequentemente, la scelta dell'\textit{eventual consistency} ci \'e sembrata la pi\'u opportuna anche in termini di costi.
 
+Abbiamo sfruttato la \textit{chiave di partizionamento} che offre \textit{DynamoDB} per collocare tramite funzione hash le puntate appartenenti alla stessa mano nella stessa partizione; cos\'i come la \textit{chiave di ordinamento} per catalogare nella stessa partizione le puntate appartenenti ad utenti differenti.
+Su consiglio delle linee guida fornite da \textit{DynamoDB} abbiamo scelto di utilizzare come chiave di partizionamento la \textit{mano} del gioco poich\'e offre un range di valori pi\'u ampio rispetto a quello offerto dalla chiave \textit{username}. 
 
 \begin{figure}\centering
  \includegraphics[scale=0.5]{Database} 
- \caption{Processo scrittura delle puntate} \label{nome} 
+ \caption{Processo scrittura delle puntate con interazione DynamoDB e Redis} \label{nome} 
  \end{figure}
+ 
+\subsection{Implementazione Clusters}
+
+
+Come illustrato precedentemente i Cluster da noi sviluppati possono essere suddivisi funzionalmente in due gruppi distinti: \textit{SuperLeader} e \textit{Frankfurt/Eire} Cluster.
+Tutti i Cluster definiti sono configurati, come precedentemente indicato nella sezione Architettura, con un numero fissato pari a 3 di istanze \textit{EC2}.
+La scelta di tale numero permette la gestione di un solo guasto (come descritto in \textit{Raft}) e aumentando il numero di istanze il risultato sarebbe invariato con un grado di tolleranza ai guasti maggiore.
+Un'altra motivazione che ci ha spinto a tale scelta \'e di natura economica.
+In ogni caso l'aggiunta o meno di altre istanze all'interno dei nostri Cluster pu\'o essere effettuata senza alcun problema, a patto che vengano identificate all'interno di una \textit{VPC} attraverso un tag univoco. Il sistema \'e configurato in modo che ogni istanza all'avvio sappia identificare esattamente quali sono le macchine appartenenti al proprio gruppo, permettendole di sfruttare il protocollo \textit{Raft} per comunicare con tutte le entit\'a del proprio gruppo.
+Tutto ci\'o sinteticamente rappresenta un servizio di \textit{Discovery Service} atto a configurare dinamicamente i Cluster \textit{Raft}.
+
+\subsubsection{Stati del Sistema}
+
+
+Poniamo ora l'attenzione verso gli Stati del Sistema.
+I due tipi di stato che si alternano sono:
+\begin{itemize}
+\item \textit{Play}: identifica le fasi di gioco dell'applicazione in cui l'utente pu\'o effettuare la puntata desiderata.
+\item \textit{Compute}: identifica la fase di estrazione del numero e il calcolo delle puntate vincenti.
+\end{itemize}
+Nella definizione di questi stati viene allegato l'istante di tempo in cui viene generato.
+Si ha un cambiamento di stato quando entrambi i Cluster di gioco comunicano la terminazione dello stato corrente, come illustrato nella figura ~\ref{fig:stateSystem}.
+
+\begin{figure}\centering
+ \includegraphics[scale=0.4]{Stati_del_sistema} 
+ \caption{Rappresentazione degli Stati del sistema} 
+\label{fig:stateSystem}
+ \end{figure}
+
+\subsubsection{SuperLeader}
+
+
+Il \textit{SuperLeader} \'e il Cluster adibito alla definizione dello stato di gioco e all'accesso e alla registrazione degli utenti.
+
+Come primo passo definiamo la gerarchia del Cluster che si compone di un leader e di due peer(follower).
+Tale definizione \'e derivata dai ruoli che impone \textit{Raft}.
+Il leader, cos\'i come i due peer, si compone di due processi :
+\begin{itemize}
+\item processo Raft (padre) che si occupa del consenso per mezzo di server \textit{TCP} e sfrutta \textit{SNS} per pubblicare i cambi di stato.
+\item processo \textit{HTTP} (figlio) per ricevere le notifiche \textit{SNS} e le richieste da parte degli utenti.
+\end{itemize}
+
+Nel dettaglio il processo \textit{Raft} sfrutta la libreria \textit{Skiff} per mantenere il consenso su un determinato stato di gioco attraverso la propagazione del log e mediante chiamate \textit{RPC}.
+
+
+Lo stato Compute \'e lo stato iniziale di esecuzione del leader, questo viene propagato attraverso il servizio SNS a tutti i Cluster di gioco.
+Il leader prima di effettuare un cambio di stato attende la ricezione del completamento della fase precedente da parte di 
+Entrambi vengono propagati verso i Cluster di gioco attraverso il servizio SNS in maniera ordinata. 
+
+DyanamoDB 3Topic SNS
+\subsubsection{Frankfurt/Eire Cluster}
+Redis DyanamoDB 1
 \subsection{Type Changes and {\subsecit Special} Characters}
 We have already seen several typeface changes in this sample.  You
 can indicate italicized words or phrases in your text with
