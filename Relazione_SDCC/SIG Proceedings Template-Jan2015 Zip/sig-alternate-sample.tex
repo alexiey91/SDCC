@@ -330,8 +330,8 @@ Per la suddivisione dei task sono stati effettuati incontri giornalieri, mentre 
 \subsection{Tecnologie utilizzate}
 
 
-Il progetto \'e stato interamente realizzato utilizzando il framework \textit{Node.js}, che consente di sfruttare il linguaggio \textit{JavaScript}, tipicamente utilizzato nella client-side, anche per la scrittura di applicazioni server-side. La caratteristica principale di \textit{Node.js} risiede nella possibilit\'a di accedere alle risorse del sistema operativo in modalit\'a event-driven evitando il modello basato su processi o thread concorrenti utilizzato dai classici web server. Per facilitare l'uso di \textit{Node.js} \'e stato utilizzato il framework \textit{Express.js}, per la realizzazione semplificata del middleware \textit{HTTP}.
- L'applicazione client \'e costituita da una singola pagina \textit{HTML} con contenuti \textit{Javascript} ed elaborata attraverso l'uso della libreria \textit{JQuery} rendendo l'interfaccia dinamica e consistente e di facile utilizzo. 
+Il lato server del progetto \'e stato interamente realizzato utilizzando il framework \textit{Node.js}, che consente di sfruttare il linguaggio \textit{JavaScript}, tipicamente utilizzato nella client-side, anche per la scrittura di applicazioni server-side. La caratteristica principale di \textit{Node.js} risiede nella possibilit\'a di accedere alle risorse del sistema operativo in modalit\'a event-driven evitando il modello basato su processi o thread concorrenti utilizzato dai classici web server. Per facilitare l'uso di \textit{Node.js} \'e stato utilizzato il framework \textit{Express.js}, per la realizzazione semplificata del middleware \textit{HTTP}.
+ L'applicazione client \'e costituita da una singola pagina \textit{HTML} con contenuti \textit{Javascript} ed elaborata attraverso l'uso della libreria \textit{JQuery} rendendo l'interfaccia dinamica, consistente e di facile utilizzo. 
 
 \subsection{Raft}
 
@@ -498,6 +498,13 @@ Lo schema soprastante rappresenta il ciclo naturale di esecuzione del leader. In
 \item se la sua fase corrisponde a \textit{Compute} allora il leader cerca eventuali puntate nella cache e, se presenti, le elabora calcolandone l'esito e le salva nella tabella \textit{Bets}; di conseguenza comunica al \textit{SuperLeader} la terminazione della fase e riprende la normale esecuzione. 
 \end{itemize}
 
+\subsection{Bilanciamento del carico}
+
+
+Per bilanciare il carico dei client su tutti i nodi presenti nei Cluster abbiamo deciso di utilizzare il servizio di Amazon \textit{Application Load Balancer}. Il servizio garantisce anche un'analisi sempre aggiornata dello stato di salute dei nodi del Cluster iscritti, inoltrando le richieste Client solo alle istanze \textit{healty}.
+Ci occorreva un servizio semplice e configurabile dinamicamente che permettesse di rendere il sistema bilanciato rispetto al numero di Client indipendentemente dal numero di istanze \textit{EC2} del Cluster. L'utilizzo di tale servizio rallenta il processo di saturazione delle risorse poich\'e impedisce una concentrazione eccessiva di connessioni su uno stesso nodo. Tutto ci\'o contribuisce a rendere il sistema pi\'u robusto e meno esposto a guasti.
+
+Abbiamo configurato tre \textit{Load Balancer} di cui due per i Cluster della regione \textit{Irlanda} e uno per il Cluster della regione \textit{Francoforte}. Inoltre abbiamo sfruttato il \textit{Cookie Stickiness} il quale permette di mantenere la connessione \textit{Client \ Server} stabile su una sola macchina per un intervallo di tempo fissato (nel nostro caso \textit{3 secondi}); questo risulta utile nei casi in cui un server target sta diventanto \textit{unhealty} ma non risulta ancora tale per il \textit{Load Balancer} .   
 
 \subsection{Type Changes and {\subsecit Special} Characters}
 We have already seen several typeface changes in this sample.  You

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  28 NOV 2016 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  28 NOV 2016 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -341,9 +341,9 @@ Overfull \hbox (3.38927pt too wide) in paragraph at lines 328--330
  []
 
 
-Overfull \hbox (13.37128pt too wide) in paragraph at lines 333--335
-\T1/aer/m/n/9 cos-ti-tuita da una sin-gola pag-ina \T1/aer/m/it/9 HTML \T1/aer/
-m/n/9 con con-tenuti \T1/aer/m/it/9 Javascript
+Overfull \hbox (13.15611pt too wide) in paragraph at lines 333--335
+\T1/aer/m/n/9 re-al-iz-zazione sem-pli-fi-cata del mid-dle-ware \T1/aer/m/it/9 
+HTTP\T1/aer/m/n/9 . L'applicazione
  []
 
 [2 <./architettura_generale.png>]
@@ -411,75 +411,75 @@ Overfull \hbox (5.93004pt too wide) in paragraph at lines 498--499
 r/m/n/9 la ter-mi-nazione
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 505.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 512.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 525.
+ne 532.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 540.
-
-
-LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
- line 567.
-
-
-LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
-67.
-
-
-LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
-e 567.
-
-
-LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
-put line 567.
-
-
-LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
-68.
-
-
-LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 569.
-
-
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 569.
-
-
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 575.
+ne 547.
 
 [5]
 
+LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
+ line 574.
+
+
+LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
+74.
+
+
+LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
+e 574.
+
+
+LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
+put line 574.
+
+
+LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
+75.
+
+
+LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
+ine 576.
+
+
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 586.
+ne 576.
+
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 582.
+
+
+LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
+ne 593.
 
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 671.
+(Font)              using `T1/aett/m/n' instead on input line 678.
 
 \c@theorem=\count117
 \c@definition=\count118
 
-Overfull \hbox (15.60826pt too wide) detected at line 748
+Overfull \hbox (15.60826pt too wide) detected at line 755
 \OML/cmm/m/it/9 l \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm
 /m/it/9 x\OT1/cmr/m/n/9 ) = [] [] = [] \OML/cmm/m/it/9 g\OT1/cmr/m/n/9 (\OML/cm
 m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 ^^A [] [] \OT1/cmr/m/n/9 = 0 \OMS/cm
 sy/m/n/9 ^^A \OML/cmm/m/it/9 L \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 ;
  []
 
+[6]
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 758.
+ine 765.
 
-[6]
 No file sig-alternate-sample.bbl.
 [7] (./sig-alternate-sample.aux)
 
@@ -492,11 +492,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3208 strings out of 493013
  41617 string characters out of 6133327
- 119825 words of memory out of 5000000
+ 118825 words of memory out of 5000000
  6642 multiletter control sequences out of 15000+600000
  59682 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,37p,694b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,37p,706b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/tex
@@ -515,7 +515,7 @@ ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on sig-alternate-sample.pdf (7 pages, 282771 bytes).
+Output written on sig-alternate-sample.pdf (7 pages, 284481 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
