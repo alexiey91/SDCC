@@ -436,14 +436,35 @@ Il leader, cos\'i come i due peer, si compone di due processi :
 \item processo \textit{HTTP} (figlio) per ricevere le notifiche \textit{SNS} e le richieste da parte degli utenti.
 \end{itemize}
 
-Nel dettaglio il processo \textit{Raft} sfrutta la libreria \textit{Skiff} per mantenere il consenso su un determinato stato di gioco attraverso la propagazione del log e mediante chiamate \textit{RPC}.
+Il processo \textit{Raft} sfrutta la libreria \textit{Skiff} per mantenere il consenso su un determinato stato di gioco attraverso la propagazione del log e mediante chiamate \textit{RPC}.
+Nella fase di inizializzazione il leader si sottoscrive ai topic di interesse:
+\begin{itemize}
+\item \textit{Computed}: su questo topic attende i messaggi che indicano la conclusione della fase di gioco \textit{Compute} da parte dei Cluster di gioco. Una volta ricevuti i messaggi da entrambi effettua la transizione di stato \textit{Compute} $\rightarrow$ \textit{Play} e lo invia ai Cluster di gioco. 
+\item \textit{Played}: su questo topic attende i messaggi che indicano la conclusione della fase di gioco \textit{Play} da parte dei Cluster di gioco. Una volta ricevuti i messaggi da entrambi effettua la transizione di stato \textit{Play} $\rightarrow$  \textit{Compute},  genera il numero della Roulette inserendolo nello stato per poi inviare quest'ultimo ai Cluster di gioco.
+\end{itemize}
+
+Lo schema soprastante rappresenta il ciclo naturale di esecuzione del leader. In caso di guasto di quest'ultimo viene innescata una procedura di rientro che coinvolge il nuovo leader. Esso:
+\begin{itemize}
+\item si sottoscrive al topic \textit{LeaderState}.
+\item richiede ad entrambi i Cluster di gioco il loro stato corrente, i quali lo pubblicheranno sul topic \textit{LeaderState}.
+\item confronta lo stato ricevuto da ognuno dei Custer con il suo stato corrente e se il primo \'e pi\'u recente rispetto al secondo lo sostituisce.
+\item si sottoscrive ai topic \textit{Computed} e \textit{Played} e successivamente chiede ai Cluster di gioco di ritrasmettere l'ultima azione (\textit{Computed} o \textit{Played}) da loro completata.
+\item riprende la normale esecuzione descritta sopra.
+\end{itemize} 
+
+A differenza di questa funzione legata alla generazione degli stati del sistema, associata unicamente al leader, qualsiasi nodo del Cluster \textit{SuperLeader} si occupa della registrazione e dell'accesso di nuovi utenti. Attraverso la pagina web messa a disposizione degli utenti, questi possono effettuare la propria registrazione: 
+\begin{itemize}
+\item la richiesta \textit{HTTP} viene catturata dal \textit{middleware Express} del nodo server contattato.
+\item vengono estratte le credenziali dell'utente, e rese persistenti sulla tabella \textit{Accounts} per mezzo delle \textit{DynamoApi}.
+\item viene inviato al \textit{client HTTP} la conferma di avvenuta registrazione.
+\end{itemize}
+Per quanto riguarda il login degli utenti, il nodo del Cluster contattato alla ricezione di una tale richiesta:
+\begin{itemize}
+\item cattura la richiesta \textit{HTTP} e ne estrae le credenziali tramite \textit{middleware Express}.
+\item controlla che le credenziali siano presenti nella tabella \textit{Accounts} di \textit{DynamoDB}.
+\end{itemize}
 
 
-Lo stato Compute \'e lo stato iniziale di esecuzione del leader, questo viene propagato attraverso il servizio SNS a tutti i Cluster di gioco.
-Il leader prima di effettuare un cambio di stato attende la ricezione del completamento della fase precedente da parte di 
-Entrambi vengono propagati verso i Cluster di gioco attraverso il servizio SNS in maniera ordinata. 
-
-DyanamoDB 3Topic SNS
 \subsubsection{Frankfurt/Eire Cluster}
 Redis DyanamoDB 1
 \subsection{Type Changes and {\subsecit Special} Characters}
