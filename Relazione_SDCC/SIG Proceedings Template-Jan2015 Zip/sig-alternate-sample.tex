@@ -244,8 +244,7 @@ is available on the web page to help you with the
 
 Le tecnologie Cloud, esplose in questi ultimi anni, hanno permesso di trasferire il peso della computazione e dell'ap-provvigionamento delle risorse informatiche verso internet. Perci\'o la rete come strumento di sviluppo oggi offre scenari ampi nella direzione della distribuzione delle risorse e della computazione: la distribuzione, come nel caso che poniamo in esame, deve rappresentare un'avanguardia per lo sviluppo di applicazioni con caratteristiche di scalabilit\'a e di alta disponibilit\'a per l'utente finale. 
 Gli sviluppatori utilizzando i servizi cloud possono gestire in maniera semplificata l'immagazzinamento di informazioni e l'elaborazione di molti dati, concentrandosi principalmente sullo sviluppo della loro applicazione piuttosto che nell'utilizzo di un sistema ortodosso e dispendioso come avveniva nel passato.
-Aziende come \textit{Spotify}, \textit{Netflix} ed altre sfruttano il servizio cloud per rendere fruibile le loro applicazioni agli utenti di tutto il mondo, ottenendo molteplici consensi.
-Molti non sanno che queste applicazioni sono cos\'i efficienti proprio perch\'e sfruttano una tecnologia cloud, che per quanto possa agevolare gli utenti e gli sviluppatori, presenta sempre qualche difficolt\'a da gestire:
+Aziende come \textit{Spotify}, \textit{Netflix} ed altre sfruttano il servizio cloud per rendere fruibile le loro applicazioni agli utenti di tutto il mondo, ottenendo molteplici consensi. Molti non sanno che queste applicazioni sono cos\'i efficienti proprio perch\'e sfruttano una tecnologia cloud, che per quanto possa agevolare gli utenti e gli sviluppatori, presenta sempre qualche difficolt\'a da gestire:
 \begin{enumerate}
 \item garantire l'accesso concorrente ad una vasta molteplicit\'a di utenti.
 \item la possibilit\'a di connettersi da ogni angolo del mondo, senza ledere la qualit\'a del servizio.
@@ -270,15 +269,15 @@ I componenti architetturali sono:
 \begin{itemize}
 \item un Cluster composto da istanze \textit{EC2}, situato nella regione Francoforte.
 \item due Cluster composti da istanze \textit{EC2}, situate nella regione Eire.
-\item Client composto da una applicazione Web.
+\item Client.
 \end{itemize}
 
 i servizi \textit{AWS} sfruttati dai componenti sono:
 \begin{itemize}
 \item \textit{SNS} per la comunicazione inter-cluster.
-\item \textit{DynamoDB} per la persistenza dei dati situato nella regione Eire.
-\item \textit{Redis} per supportare la logica del gioco situato sia nella regione Eire che Francoforte.
-\item \textit{LoadBalancer} per distribuire il carico. 
+\item \textit{DynamoDB} per la persistenza dei dati, situato nella regione Eire.
+\item \textit{Redis} per supportare la logica del gioco, situato sia nella regione Eire che Francoforte.
+\item \textit{LoadBalancer} per distribuire il carico dei Client. 
 \end{itemize}
 
 \begin{figure}\centering
@@ -287,7 +286,7 @@ i servizi \textit{AWS} sfruttati dai componenti sono:
  \end{figure}
  
 La motivazione che ci ha spinto nell'adottare pi\'u cluster su pi\'u aree geografiche europee \'e stata la possibilit\'a di realizzare una scalabilit\'a di tipo geografico.
-Ci\'o non toglie che tale realizzazione si possa estendere anche all'interno di altre regioni geografiche messe a disposizione da \textit{AWS}. La motivazione che ci ha spinto a questa scelta \'e legata a fattori di latenza ma anche economici, facilitando lo sviluppo dell'applicazione e la fase di testing.
+Ci\'o non toglie che tale realizzazione si possa estendere anche all'interno di altre regioni geografiche messe a disposizione da \textit{AWS}. La motivazione che ci ha spinto a questa scelta \'e legata a fattori di latenza ma anche a fattori economici, oltre alla semplificazione dello sviluppo dell'applicazione e della fase di testing.
 
 
 
@@ -295,7 +294,7 @@ Ci\'o non toglie che tale realizzazione si possa estendere anche all'interno di 
 \subsection{Cluster EC2}
 
 
-All'interno di questa sezione andiamo a trattare nel dettaglio quali sono le funzionalit\'a e le componenti dei Cluster \textit{EC2}.
+In questa sezione andiamo a trattare nel dettaglio quali sono le funzionalit\'a e le componenti dei Cluster \textit{EC2}.
 
 I Cluster istanziati sono soggetti ad una gerarchia dettata dalla realizzazione di uno stato condivisibile, che corrisponde alle fasi di gioco dell'applicazione.
 Pertanto possiamo suddividere tali cluster in base alla loro mansione :
