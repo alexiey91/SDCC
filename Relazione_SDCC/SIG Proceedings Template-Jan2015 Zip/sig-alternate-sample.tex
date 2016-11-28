@@ -446,13 +446,13 @@ Nella fase di inizializzazione il leader si sottoscrive ai topic di interesse:
 Lo schema soprastante rappresenta il ciclo naturale di esecuzione del leader. In caso di guasto di quest'ultimo viene innescata una procedura di rientro che coinvolge il nuovo leader. Esso:
 \begin{itemize}
 \item si sottoscrive al topic \textit{LeaderState}.
-\item richiede ad entrambi i Cluster di gioco il loro stato corrente, i quali lo pubblicheranno sul topic \textit{LeaderState}.
+\item richiede ad entrambi i Cluster di gioco il loro stato corrente, i quali a loro volta lo pubblicheranno sul topic \textit{LeaderState}.
 \item confronta lo stato ricevuto da ognuno dei Custer con il suo stato corrente e se il primo \'e pi\'u recente rispetto al secondo lo sostituisce.
 \item si sottoscrive ai topic \textit{Computed} e \textit{Played} e successivamente chiede ai Cluster di gioco di ritrasmettere l'ultima azione (\textit{Computed} o \textit{Played}) da loro completata.
 \item riprende la normale esecuzione descritta sopra.
 \end{itemize} 
 
-A differenza di questa funzione legata alla generazione degli stati del sistema, associata unicamente al leader, qualsiasi nodo del Cluster \textit{SuperLeader} si occupa della registrazione e dell'accesso di nuovi utenti. Attraverso la pagina web messa a disposizione degli utenti, questi possono effettuare la propria registrazione: 
+A differenza di questa funzione legata alla generazione degli stati del sistema, associata unicamente al leader, qualsiasi nodo del Cluster \textit{SuperLeader} si occupa della registrazione e dell'accesso di nuovi utenti. Attraverso la pagina web messa a disposizione agli utenti, questi possono effettuare la propria sottoscrizione al gioco: 
 \begin{itemize}
 \item la richiesta \textit{HTTP} viene catturata dal \textit{middleware Express} del nodo server contattato.
 \item vengono estratte le credenziali dell'utente, e rese persistenti sulla tabella \textit{Accounts} per mezzo delle \textit{DynamoApi}.
