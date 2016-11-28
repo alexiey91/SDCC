@@ -433,7 +433,7 @@ Tale definizione \'e derivata dai ruoli che impone \textit{Raft}.
 Il leader, cos\'i come i due peer, si compone di due processi :
 \begin{itemize}
 \item processo Raft (padre) che si occupa del consenso per mezzo di server \textit{TCP} e sfrutta \textit{SNS} per pubblicare i cambi di stato.
-\item processo \textit{HTTP} (figlio) per ricevere le notifiche \textit{SNS} e le richieste da parte degli utenti.
+\item processo \textit{HTTP} (figlio) che si occupa di ricevere le notifiche \textit{SNS} e le richieste da parte degli utenti.
 \end{itemize}
 
 Il processo \textit{Raft} sfrutta la libreria \textit{Skiff} per mantenere il consenso su un determinato stato di gioco attraverso la propagazione del log e mediante chiamate \textit{RPC}.
@@ -465,8 +465,41 @@ Per quanto riguarda il login degli utenti, il nodo del Cluster contattato alla r
 \end{itemize}
 
 
+
 \subsubsection{Frankfurt/Eire Cluster}
-Redis DyanamoDB 1
+
+
+I Cluster di gioco si occupano dell'esecuzione delle operazioni relative allo stato corrente del sistema. Essi operano in due regioni differenti ma sono esattamente equivalenti, pertanto ne illustreremo soltanto uno. 
+
+Il Cluster di gioco sfrutta le funzionalit\'a offerte da \textit{Skiff} per mantenere il consenso sullo stato corrente tra i suoi nodi mediante chiamate \textit{RPC} e per crearne una gerarchia (\textit{follower/leader}).
+Il leader, cos\'i come i due peer, si compone di due processi :
+\begin{itemize}
+\item processo Raft (padre) che si occupa del consenso per mezzo di server \textit{TCP} e sfrutta \textit{SNS} per pubblicare la terminazione della fase corrente di gioco (\textit{Computed / Played}).
+\item processo \textit{HTTP} (figlio) che si occupa di ricevere le notifiche \textit{SNS} e le richieste da parte degli utenti.
+\end{itemize}
+
+Nella fase di inizializzazione il leader si sottoscrive al topic di interesse \textit{RegionLeaderTopic}. Su questo topic attende notifiche da parte del Cluster \textit{SuperLeader} che si differenziano in funzione del contenuto:
+\begin{itemize}
+\item se il contenuto \'e un \textit{JSON} allora identifica un nuovo stato del sistema, al quale il Cluster di gioco dovr\'a allinearsi ed eseguire le relative operazioni.
+\item se il contenuto \'e la stringa \textit{currentState} allora identifica la richiesta dello stato corrente del Cluster di gioco. Questa notifica viene inviata dal leader del Cluster \textit{SuperLeader} quando \'e stata innescata la procedura di rientro di quest'ultimo.
+\item se il contenuto \'e la stringa \textit{lastMessage} allora identifica la richiesta di ritrasmissione dell'ultimo messaggio di terminazione fase inviato (\textit{Computed / Played}). Questa notifica viene inviata dal leader del Cluster \textit{SuperLeader} quando viene innescata la procedura di rientro di quest'ultimo.
+\end{itemize} 
+
+Di conseguenza alla ricezione della notifica di cambio di stato del sistema nel nodo leader possono verificarsi due scenari differenti:
+\begin{itemize}
+\item il valore del campo \textit{phase} dello stato ricevuto corrisponde a \textit{Play}. Il leader del Cluster di gioco crea un processo che gestisce la nuova fase. Per un tempo pari a \textit{20 secondi} quest'ultimo permane nello stato \textit{Play}, terminato il quale pubblica sul topic \textit{Played} il suo completamento specificando la sua zona di appartenenza (\textit{Frankfurt o Eire}); infine aggiorna nel db \textit{in-memory di Skiff} il valore identificato dalla chiave \textit{lastMessage} al valore \textit{Played}.
+In questa fase, inoltre, ogni nodo del Cluster di gioco (sincronizzato mediante \textit{Skiff} allo stato \textit{Play} corrente) riceve dai client connessi le puntate effettuate dagli utenti e le salva di conseguenza all'interno della cache \textit{Redis} della regione in questione.  
+\item il valore del campo \textit{phase} dello stato ricevuto corrisponde a \textit{Compute}. Il leader del Cluster di gioco crea un processo che gestisce la nuova fase. Per un tempo pari a \textit{8 secondi} quest'ultimo permane nello stato \textit{Compute}, terminato il quale pubblica sul topic \textit{Computed} il suo completamento specificando la sua zona di appartenenza (\textit{Frankfurt o Eire}); infine aggiorna nel db \textit{in-memory di Skiff} il valore identificato dalla chiave \textit{lastMessage} al valore \textit{Computed}.
+Durante quest'arco temporale il leader del Cluster di gioco preleva dalla cache \textit{Redis} le puntate raccolte durante la fase precedente, ne calcola l'esito e le salva sulla tabella \textit{Bets} di \textit{DynamoDB}. Dopodich\'e aggiorna il credito di ogni utente che ha effettuato la puntata all'interno della tabella \textit{Accounts} ed infine libera la cache per la nuova fase.
+\end{itemize}
+
+Lo schema soprastante rappresenta il ciclo naturale di esecuzione del leader. In caso di guasto di quest'ultimo viene innescata una procedura di rientro che coinvolge il nuovo leader. Prima di effettuarla il nuovo leader provveder\'a ad effettuare le sottoscrizioni descritte prima. In base allo stato di \textit{Skiff} che ha ereditato adotta due comportamenti differenti:
+\begin{itemize}
+\item se la sua fase corrisponde a \textit{Play} allora il leader calcola il tempo di gioco restante rispetto all'istante di inizio della fase (lo stato ha come attributo un \textit{timestamp} di creazione stato) al termine del quale comunica al \textit{SuperLeader} la terminazione della fase; infine riprende la normale procedura di esecuzione precedentemente descritta. 
+\item se la sua fase corrisponde a \textit{Compute} allora il leader cerca eventuali puntate nella cache e, se presenti, le elabora calcolandone l'esito e le salva nella tabella \textit{Bets}; di conseguenza comunica al \textit{SuperLeader} la terminazione della fase e riprende la normale esecuzione. 
+\end{itemize}
+
+
 \subsection{Type Changes and {\subsecit Special} Characters}
 We have already seen several typeface changes in this sample.  You
 can indicate italicized words or phrases in your text with

@@ -1,39 +1,41 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  28 NOV 2016 12:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  28 NOV 2016 15:44
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **sig-alternate-sample.tex
-(sig-alternate-sample.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-(sig-alternate-05-2015.cls
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+(./sig-alternate-sample.tex
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(./sig-alternate-05-2015.cls
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
 ))
@@ -43,10 +45,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen104
 \epsfysize=\dimen105
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -54,41 +56,41 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/06/28 v2.15d AMS math features
 \@mathmargin=\skip41
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen106
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen107
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 1999/12/14 v2.01 operator names
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count80
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count81
 \leftroot@=\count82
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count83
 \DOTSCASE@=\count84
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen108
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count85
 \c@MaxMatrixCols=\count86
 \dotsspace@=\muskip10
@@ -109,8 +111,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip42
 \multlinetaggap=\skip43
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
 Document Class 'sig-alternate' <9th June '13>. Modified by G.K.M. Tobin/Gerry M
 urray/Boris Veytsman
@@ -122,7 +124,7 @@ m.org ******
 Questions on the style, SIGS policies, etc. to Adrienne Griscti griscti@acm.org
 
 \ACM@basesize=\count92
-(C:\Users\alessandro\AppData\Roaming\MiKTeX\2.9\tex\latex\comment\comment.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
 
 Excluding comment 'comment') Excluding comment 'CCSXML'
@@ -130,9 +132,8 @@ Excluding comment 'comment') Excluding comment 'CCSXML'
 \@maxsep=\dimen116
 \@dblmaxsep=\dimen117
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 \aucount=\count93
 \originalaucount=\count94
@@ -157,7 +158,7 @@ LaTeX Warning: You have requested document class `sig-alternate-05-2015',
 
 Document Class: sig-alternate 2013/05/12 v2.7 based on acmproc.cls V1.3 <Nov. 3
 0 '99>
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -188,17 +189,17 @@ LaTeX Info: Redefining \cite on input line 1408.
 \copyrtyr=\toks32
 \acmcopyr=\toks33
 \boilerplate=\toks34
-(C:\Users\alessandro\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(acmcopyright.sty
+) (./acmcopyright.sty
 Package: acmcopyright 2014/06/29 v1.2 Copyright statemens for ACM classes
- ("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks35
 \XKV@tempa@toks=\toks36
 )
@@ -207,19 +208,25 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 \copyrightetc=\toks37
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2016/06/19 v1.99m Standard LaTeX package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
-File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2016/06/19 v1.99m Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-(sig-alternate-sample.aux)
+(./sig-alternate-sample.aux
+
+LaTeX Warning: Label `nome' multiply defined.
+
+)
+\openout1 = `sig-alternate-sample.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
@@ -232,8 +239,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
-
-(C:\Users\alessandro\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen123
@@ -246,20 +252,66 @@ LaTeX Font Info:    ... okay on input line 54.
 \MPnumerator=\count115
 \makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks39
-) Excluding 'comment' comment.
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Excluding 'comment' comment.
 LaTeX Font Info:    Try loading font information for U+msa on input line 161.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 161.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 161.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 Overfull \hbox (1.0793pt too wide) in paragraph at lines 164--173
@@ -279,7 +331,7 @@ File: architettura_generale.png Graphic file (type png)
 <use architettura_generale.png>
 Package pdftex.def Info: architettura_generale.png used on input line 285.
 (pdftex.def)             Requested size: 240.09274pt x 189.90613pt.
- [1{C:/Users/alessandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ] Excluding 'comment' comment.
@@ -312,17 +364,13 @@ Overfull \hbox (2.36475pt too wide) in paragraph at lines 387--389
 
  []
 
-<Database.png, id=22, 445.665pt x 189.70876pt>
+<Database.png, id=23, 445.665pt x 189.70876pt>
 File: Database.png Graphic file (type png)
  <use Database.png>
 Package pdftex.def Info: Database.png used on input line 394.
 (pdftex.def)             Requested size: 222.83195pt x 94.85414pt.
 
-
-LaTeX Warning: Reference `fig:stateSystem' on page \thepage  undefined on input
- line 418.
-
-<Stati_del_sistema.png, id=23, 586.19pt x 287.0725pt>
+<Stati_del_sistema.png, id=24, 586.19pt x 287.0725pt>
 File: Stati_del_sistema.png Graphic file (type png)
 
 <use Stati_del_sistema.png>
@@ -339,115 +387,138 @@ Overfull \hbox (14.6419pt too wide) in paragraph at lines 458--459
 r mezzo delle \T1/aer/m/it/9 Dy-namoApi\T1/aer/m/n/9 . 
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 473.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+Overfull \hbox (7.21645pt too wide) in paragraph at lines 490--492
+[]\T1/aer/m/n/9 il val-ore del campo \T1/aer/m/it/9 phase \T1/aer/m/n/9 dello s
+tato rice-vuto cor-risponde
+ []
+
+[4 <./Stati_del_sistema.png>]
+Overfull \hbox (7.21645pt too wide) in paragraph at lines 492--494
+[]\T1/aer/m/n/9 il val-ore del campo \T1/aer/m/it/9 phase \T1/aer/m/n/9 dello s
+tato rice-vuto cor-risponde
+ []
+
+
+Overfull \hbox (1.33044pt too wide) in paragraph at lines 499--500
+\T1/aer/m/n/9 elab-ora cal-colan-done l'esito e le salva nella tabella \T1/aer/
+m/it/9 Bets\T1/aer/m/n/9 ;
+ []
+
+
+Overfull \hbox (5.93004pt too wide) in paragraph at lines 499--500
+\T1/aer/m/n/9 di con-seguenza co-mu-nica al \T1/aer/m/it/9 Su-per-Leader \T1/ae
+r/m/n/9 la ter-mi-nazione
+ []
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 506.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 493.
+ne 526.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 508.
+ne 541.
 
-[4 <./Stati_del_sistema.png>]
 
 LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
- line 535.
+ line 568.
 
 
 LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
-35.
+68.
 
 
 LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
-e 535.
+e 568.
 
 
 LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
-put line 535.
+put line 568.
 
 
 LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 5
-36.
+69.
 
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 537.
+ine 570.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 537.
+ne 570.
 
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 543.
+ne 576.
 
+[5]
 
 LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 554.
+ne 587.
 
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 639.
+(Font)              using `T1/aett/m/n' instead on input line 672.
 
 \c@theorem=\count117
 \c@definition=\count118
-[5]
-Overfull \hbox (15.60826pt too wide) detected at line 716
+
+Overfull \hbox (15.60826pt too wide) detected at line 749
 \OML/cmm/m/it/9 l \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm
 /m/it/9 x\OT1/cmr/m/n/9 ) = [] [] = [] \OML/cmm/m/it/9 g\OT1/cmr/m/n/9 (\OML/cm
-m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9  [] [] \OT1/cmr/m/n/9 = 0 \OMS/cmsy
-/m/n/9  \OML/cmm/m/it/9 L \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 ;
+m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 ^^A [] [] \OT1/cmr/m/n/9 = 0 \OMS/cm
+sy/m/n/9 ^^A \OML/cmm/m/it/9 L \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 ;
  []
 
 
 LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 726.
+ine 759.
 
+[6]
 No file sig-alternate-sample.bbl.
-[6] [7
-
-] (sig-alternate-sample.aux)
+[7] (./sig-alternate-sample.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2853 strings out of 493673
- 34688 string characters out of 3143946
- 108506 words of memory out of 3000000
- 6121 multiletter control sequences out of 15000+200000
- 59682 words of font info for 83 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 41i,10n,34p,694b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/
-uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sig-alternate-sample.pdf (7 pages, 287325 bytes).
+ 3208 strings out of 493013
+ 41617 string characters out of 6133327
+ 119825 words of memory out of 5000000
+ 6642 multiletter control sequences out of 15000+600000
+ 59682 words of font info for 83 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,10n,37p,694b,279s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
+s/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on sig-alternate-sample.pdf (7 pages, 282811 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
