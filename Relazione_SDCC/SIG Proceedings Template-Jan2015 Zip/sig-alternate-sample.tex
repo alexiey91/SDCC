@@ -267,8 +267,8 @@ Tale applicazione permette di effettuare particolari puntate in base alla propri
 In questa sezione verr\'a illustrata a livello logico la nostra architettura descrivendo i servizi \textit{Amazon} utilizzati e i moduli sviluppati.
 I componenti architetturali sono:
 \begin{itemize}
-\item un Cluster composto da istanze \textit{EC2}, situato nella regione Francoforte.
-\item due Cluster composti da istanze \textit{EC2}, situate nella regione Eire.
+\item un Cluster composto da istanze \textit{EC2 t2-micro}, situato nella regione Francoforte.
+\item due Cluster composti da istanze \textit{EC2 t2-micro}, situate nella regione Eire.
 \item Client.
 \end{itemize}
 
@@ -554,11 +554,23 @@ Qui di seguito illustriamo la tipica esecuzione di un utente che vuole entrare n
 \item Al primo accesso dell'utente alla piattaforma di gioco assegnata gli verr\'a richiesta la conferma di un codice di accesso (\textit{daily code}). Se il codice \'e corretto si accede alla piattaforma altrimenti si ritorna alla pagina di login.
 \end{itemize}
 
+\section{Test}
+In data 25/11/2016 dalle ore 14:30 alle ore 17:30 abbiamo testato il nostro sistema coinvolgendo colleghi dell'ambiente universitario. Lo scopo principale del test \'e stato monitorare la capacit\'a di adattamento del sistema alle variazioni del carico e l'efficacia della \textit{policy del ping} per il processo di \textit{redirect}. 
 
+Il campione di utenti era costituito prevalentemente da utenti di nazionalit\'a italiana con l'eccezione di un utente residente a Londra ed un secondo residente a Siviglia.  Entrambi hanno osservato che il server di gioco al quale si sono collegati era appartenente al Cluster irlandese; ci\'o indica che il \textit{RTT} del \textit{ping} \'e anche influenzato dalla distanza geografica delle entit\'a comunicanti oltre che dalla distanza in termini di rete, non tradendo le nostre aspettative. Tutti gli altri utenti, situati nel territorio nazionale, hanno sperimentato un reindirizzameto al Cluster della regione geografica di Francoforte.
 
+Durante il test si sono registrati e connessi ai server di gioco 30 utenti distribuiti durante l'arco temporale sopra indicato. Per mezzo del servizio \textit{Cloud Watch} abbiamo prelevato dei dati riguardanti l'andamento del carico dei tre \textit{Load Balancer}. Le metriche riportate sui grafici riguardano i valori medi in un intervallo di \textit{5 minuti} delle connessioni attive e di quelle in ingresso. 
 
+ \begin{figure}
+ \includegraphics[scale=0.35]{connection_login} 
+ \caption{Andamento delle metriche del \textit{Load Balancer del SuperLeader}} 
+\label{fig:connectionLogin}
+ \end{figure}
 
+ 
+\section{Sviluppi Futuri}
 
+\section{Conclusioni}
 
 
 \subsection{Type Changes and {\subsecit Special} Characters}1
