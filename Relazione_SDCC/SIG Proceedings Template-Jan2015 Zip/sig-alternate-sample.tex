@@ -511,22 +511,21 @@ Il termine scalabilit\'a, nelle telecomunicazioni, nell'ingegneria del software,
 La tipologia di scalabilit\'a implementata nel nostro sistema \'e quella \textit{geografica}.
 Un sistema geograficamente scalabile \'e quello che mantiene inalterata la sua usabilit\'a e utilit\'a indipendentemente dalla distanza fisica dei suoi utenti o delle sue risorse.
 
-Poich\'e il nostro sistema viene installato all'interno di pi\'u nodi situati in diverse aree geografiche, abbiamo analizzato varie \textit{policy} che permettessero una gestione dinamica del carico degli utenti sui nodi della rete, mantenendo un servizio efficiente indipendentemente dalla propria distanza al Cluster. A tal proposito abbiamo sfruttato
- le funzionalit\'a offerte dal servizio \textit{AWS Load Balancer} per distribuire il carico sui vari nodi,come illustrato in precedenza, ed \'e stata adottata una politica di \textit{Ping} per il reindirizzamento dell'utente al Cluster, permettendogli di accedere alle risorse senza avere una grossa latenza.
+Poich\'e il nostro sistema viene installato all'interno di pi\'u nodi situati in diverse aree geografiche, abbiamo analizzato varie \textit{policy} che permettessero una gestione dinamica del carico degli utenti sui nodi della rete, mantenendo un servizio efficiente indipendentemente dalla propria distanza dal Cluster. A tal proposito abbiamo sfruttato le funzionalit\'a offerte dal servizio \textit{AWS Load Balancer} per distribuire il carico sui vari nodi, come illustrato in precedenza, ed \'e stata adottata una politica di \textit{Ping} per il reindirizzamento dell'utente al Cluster, permettendogli di accedere alle risorse senza avere una grossa latenza.
 Sfruttando tale \textit{policy} implementiamo la scalabilit\'a geografica all'interno del protocollo di rete:
 \begin{enumerate}
 \item Si effettua il ping verso gli indirizzi dei due \textit{Load Balancer} siti in due aree geografiche distinte.
-\item Si analizza il \textit{TTL} prodotto ricercando il minore tra i due.
-\item Si reindirizza l'utente verso il \textit{Load Balancer} che ha generato il \textit{TTL} minore.
+\item Si analizza il \textit{RTT} prodotto ricercando il minore tra i due.
+\item Si reindirizza l'utente verso il \textit{Load Balancer} che ha generato il \textit{RTT} minore.
 \end{enumerate}
  
-Non sfruttiamo \textit{policy} come la localizzazione dell'indirizzo \textit{IP} in quanto risulta essere statica, ed anche poco indicativa o sconveniente per effettuare una connessione ad una regione piuttosto che ad un'altra,  in quanto non sempre la ridotta distanza fisica, dall'utente fino al \textit{Load Balancer}, risulta essere realmente una soluzione vincente, in quanto non sempre rispecchia una vicinanza all'interno della rete.
+Non sfruttiamo \textit{policy} come la localizzazione dell'indirizzo \textit{IP} in quanto risulta essere sconveniente per effettuare una connessione ad una regione piuttosto che ad un'altra, poich\'e non sempre la ridotta distanza fisica (distanza tra la macchina usata dall'utente ed il server ospitante il \textit{Load Balancer}) rispecchia una vicinanza in termini di rete.
 
-L'implementazione di tale procedura viene effettuata all'interno del Cluster \textit{SuperLeader} all'accesso di un utente alla piattaforma di gioco. In questo modo il Cluster distribuisce gli utenti sui diversi Cluster di gioco.
+Tale procedura \'e implementata nel Client del Cluster \textit{SuperLeader} e viene innescata in corrispondenza del login di un utente alla piattaforma di gioco. In questo modo il Cluster distribuisce gli utenti sui diversi Cluster di gioco.
 
 \subsection{Client}
 
-Per l'elaborazione della piattaforma di gioco \'e stata implementata una singola pagina HTML che sfrutta  i servizi offerti da Bootstrap, CSS, ed infine JQuery per la logica dietro la pagina.
+Per l'elaborazione della piattaforma di gioco \'e stata implementata una singola pagina \textit{HTML} che sfrutta  i servizi offerti da \textit{Bootstrap}, \textit{CSS}, ed infine \textit{JQuery} per la logica dietro la pagina.
 Prima di trattare la logica implementativa, poniamo l'attenzione sulle fasi del gioco presenti all'interno dell'applicazione.
 Le fasi di gioco sono 4 e servono per identificare le varie fasi dettate dal gioco della roulette.
 \begin{itemize}
@@ -537,7 +536,7 @@ Le fasi di gioco sono 4 e servono per identificare le varie fasi dettate dal gio
 \end{itemize}
 
 Queste fasi di gioco del Client corrispondono alle fasi dettate dalle regole di gioco della roulette, ed inoltre vengono utilizzate per effettuare la sincronizzazione con le fasi del Server.
-A tal proposito le prime due fasi, \textit{Place your bet} e \textit{Last Bets} corrispondono alla fase di \textit{Play} definita nel server, descritta nei paragrafi precedenti. La durata di queste due fasi \'e pensata in modo che ci sia una sincronia con le fasi del server, evitando cos\'i che le puntate degli utenti vengano effettuate durante la fase errata. Le restanti fasi, \textit{No more bets} e \textit{Payment}, corrispondono alla fase di \textit{Compute} del server. Durante queste ultime fasi vengono effettuate diverse chiamate rest verso i \textit{Load Balancer}, il quale contatter\'a a sua volta  i nodi ad esso registrati, ricevendo le informazioni richieste, tra cui il credito dell'utente e lo stato del gioco.
+A tal proposito le prime due fasi, \textit{Place your bet} e \textit{Last Bets} corrispondono alla fase di \textit{Play} definita nel server, descritta nei paragrafi precedenti. La durata di queste due fasi \'e pensata in modo che ci sia una sincronia con le fasi del server, evitando cos\'i che le puntate degli utenti vengano effettuate durante la fase errata. Le restanti fasi, \textit{No more bets} e \textit{Payment}, corrispondono alla fase di \textit{Compute} del server. Durante queste ultime fasi vengono effettuate diverse chiamate rest verso il \textit{Load Balancer}, il quale contatter\'a a sua volta  i nodi ad esso registrati, ricevendo le informazioni richieste, tra cui il credito dell'utente e lo stato del gioco.
 La fase di \textit{Payment}, oltre alla funzione descritta in precedenza, svolge una funzione aggiuntiva di riallineamento con lo stato del server, quando necessaria, in caso di guasto di quest'ultimo.
  
 \subsection{Type Changes and {\subsecit Special} Characters}1

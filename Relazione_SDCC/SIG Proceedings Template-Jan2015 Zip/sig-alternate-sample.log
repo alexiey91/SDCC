@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.25)  29 NOV 2016 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.25)  29 NOV 2016 14:17
 entering extended mode
 **./sig-alternate-sample.tex
 (sig-alternate-sample.tex
@@ -412,9 +412,9 @@ ngegneria
  []
 
 
-Overfull \hbox (20.44604pt too wide) in paragraph at lines 525--526
-[]\T1/aer/m/n/9 L'implementazione di tale pro-ce-dura viene ef-fet-tuata all'in
-terno
+Overfull \hbox (3.75108pt too wide) in paragraph at lines 522--523
+\T1/aer/m/n/9 non sem-pre la ri-dotta dis-tanza fisica (dis-tanza tra la macchi
+na
  []
 
 [5]
@@ -502,7 +502,7 @@ Here is how much of TeX's memory you used:
  6627 multiletter control sequences out of 15000+200000
  59682 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,37p,754b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,37p,774b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -519,7 +519,7 @@ type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sig-alternate-sample.pdf (8 pages, 307445 bytes).
+Output written on sig-alternate-sample.pdf (8 pages, 307814 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
