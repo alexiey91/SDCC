@@ -537,8 +537,13 @@ Le fasi di gioco sono 4 e servono per identificare le varie fasi dettate dal gio
 
 Queste fasi di gioco del Client corrispondono alle fasi dettate dalle regole di gioco della roulette, ed inoltre vengono utilizzate per effettuare la sincronizzazione con le fasi del Server.
 A tal proposito le prime due fasi, \textit{Place your bet} e \textit{Last Bets} corrispondono alla fase di \textit{Play} definita nel server, descritta nei paragrafi precedenti. La durata di queste due fasi \'e pensata in modo che ci sia una sincronia con le fasi del server, evitando cos\'i che le puntate degli utenti vengano effettuate durante la fase errata. Le restanti fasi, \textit{No more bets} e \textit{Payment}, corrispondono alla fase di \textit{Compute} del server. Durante queste ultime fasi vengono effettuate diverse chiamate rest verso il \textit{Load Balancer}, il quale contatter\'a a sua volta  i nodi ad esso registrati, ricevendo le informazioni richieste, tra cui il credito dell'utente e lo stato del gioco.
-La fase di \textit{Payment}, oltre alla funzione descritta in precedenza, svolge una funzione aggiuntiva di riallineamento con lo stato del server, quando necessaria, in caso di guasto di quest'ultimo.
- 
+La fase di \textit{Payment}, oltre alla funzione descritta in precedenza, svolge una funzione aggiuntiva di riallineamento con lo stato del server, quando necessaria, in caso di guasto di quest'ultimo.(vedi figure~\ref{fig:clientState}).
+ \begin{figure}\centering
+ \includegraphics[scale=0.5]{stati_client} 
+ \caption{Rappresentazione degli Stati del Client} 
+\label{fig:clientState}
+ \end{figure}
+
 \subsection{Type Changes and {\subsecit Special} Characters}1
 We have already seen several typeface changes in this sample.  You
 can indicate italicized words or phrases in your text with
