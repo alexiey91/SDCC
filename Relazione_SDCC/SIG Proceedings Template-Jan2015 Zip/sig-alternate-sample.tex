@@ -504,9 +504,42 @@ Lo schema soprastante rappresenta il ciclo naturale di esecuzione del leader. In
 Per bilanciare il carico dei client su tutti i nodi presenti nei Cluster abbiamo deciso di utilizzare il servizio di Amazon \textit{Application Load Balancer}. Il servizio garantisce anche un'analisi sempre aggiornata dello stato di salute dei nodi del Cluster iscritti, inoltrando le richieste Client solo alle istanze \textit{healty}.
 Ci occorreva un servizio semplice e configurabile dinamicamente che permettesse di rendere il sistema bilanciato rispetto al numero di Client indipendentemente dal numero di istanze \textit{EC2} del Cluster. L'utilizzo di tale servizio rallenta il processo di saturazione delle risorse poich\'e impedisce una concentrazione eccessiva di connessioni su uno stesso nodo. Tutto ci\'o contribuisce a rendere il sistema pi\'u robusto e meno esposto a guasti.
 
-Abbiamo configurato tre \textit{Load Balancer} di cui due per i Cluster della regione \textit{Irlanda} e uno per il Cluster della regione \textit{Francoforte}. Inoltre abbiamo sfruttato il \textit{Cookie Stickiness} il quale permette di mantenere la connessione \textit{Client \ Server} stabile su una sola macchina per un intervallo di tempo fissato (nel nostro caso \textit{3 secondi}); questo risulta utile nei casi in cui un server target sta diventanto \textit{unhealty} ma non risulta ancora tale per il \textit{Load Balancer} .   
+Abbiamo configurato tre \textit{Load Balancer} di cui due per i Cluster della regione \textit{Irlanda} e uno per il Cluster della regione \textit{Francoforte}. Inoltre abbiamo sfruttato il \textit{Cookie Stickiness} il quale permette di mantenere la connessione \textit{Client \ Server} stabile su una sola macchina per un intervallo di tempo fissato (nel nostro caso \textit{3 secondi}); questo risulta utile nei casi in cui un server target sta diventanto \textit{unhealty} ma non risulta ancora tale per il \textit{Load Balancer}.   
 
-\subsection{Type Changes and {\subsecit Special} Characters}
+\subsection{Scalabilit\'a}
+Il termine scalabilit\'a, nelle telecomunicazioni, nell'ingegneria del software, in informatica e in altre discipline, si riferisce, in termini generali, alla capacit\'a di un sistema di "crescere" o diminuire di scala in funzione delle necessit\'a e delle disponibilit\'a. Un sistema che gode di questa propriet\'a viene detto scalabile.
+La tipologia di scalabilit\'a implementata nel nostro sistema \'e quella \textit{geografica}.
+Un sistema geograficamente scalabile \'e quello che mantiene inalterata la sua usabilit\'a e utilit\'a indipendentemente dalla distanza fisica dei suoi utenti o delle sue risorse.
+
+Poich\'e il nostro sistema viene installato all'interno di pi\'u nodi situati in diverse aree geografiche, abbiamo analizzato varie \textit{policy} che permettessero una gestione dinamica del carico degli utenti sui nodi della rete, mantenendo un servizio efficiente indipendentemente dalla propria distanza al Cluster. A tal proposito abbiamo sfruttato
+ le funzionalit\'a offerte dal servizio \textit{AWS Load Balancer} per distribuire il carico sui vari nodi,come illustrato in precedenza, ed \'e stata adottata una politica di \textit{Ping} per il reindirizzamento dell'utente al Cluster, permettendogli di accedere alle risorse senza avere una grossa latenza.
+Sfruttando tale \textit{policy} implementiamo la scalabilit\'a geografica all'interno del protocollo di rete:
+\begin{enumerate}
+\item Si effettua il ping verso gli indirizzi dei due \textit{Load Balancer} siti in due aree geografiche distinte.
+\item Si analizza il \textit{TTL} prodotto ricercando il minore tra i due.
+\item Si reindirizza l'utente verso il \textit{Load Balancer} che ha generato il \textit{TTL} minore.
+\end{enumerate}
+ 
+Non sfruttiamo \textit{policy} come la localizzazione dell'indirizzo \textit{IP} in quanto risulta essere statica, ed anche poco indicativa o sconveniente per effettuare una connessione ad una regione piuttosto che ad un'altra,  in quanto non sempre la ridotta distanza fisica, dall'utente fino al \textit{Load Balancer}, risulta essere realmente una soluzione vincente, in quanto non sempre rispecchia una vicinanza all'interno della rete.
+
+L'implementazione di tale procedura viene effettuata all'interno del Cluster \textit{SuperLeader} all'accesso di un utente alla piattaforma di gioco. In questo modo il Cluster distribuisce gli utenti sui diversi Cluster di gioco.
+
+\subsection{Client}
+
+Per l'elaborazione della piattaforma di gioco \'e stata implementata una singola pagina HTML che sfrutta  i servizi offerti da Bootstrap, CSS, ed infine JQuery per la logica dietro la pagina.
+Prima di trattare la logica implementativa, poniamo l'attenzione sulle fasi del gioco presenti all'interno dell'applicazione.
+Le fasi di gioco sono 4 e servono per identificare le varie fasi dettate dal gioco della roulette.
+\begin{itemize}
+\item Place your bet: in questa fase ogni utente che abbia effettuato l'accesso alla piattaforma ha a disposizione \sim{~}15 secondi per puntare sulla roulette.
+\item Last bets: in questa fase ogni utente che abbia effettuato l'accesso alla piattaforma ha a disposizione gli ultimi \sim{~}5 secondi per puntare sulla roulette.
+\item No more bets: in questa fase l'utente non pu\'o pi\'u effettuare puntate mentre attende l'uscita del numero del turno.
+\item Payment: in caso di vincita si effettua l'aggiornamento del credito a disposizione dell'utente.
+\end{itemize}
+
+Queste fasi di gioco del Client corrispondono alle fasi dettate dalle regole di gioco della roulette, ed inoltre vengono utilizzate per effettuare la sincronizzazione con le fasi del Server.
+A tal proposito le prime due fasi, Place your bet e Last Bets corrispondono alla fase di \textit{play} descritta nei paragrafi precedenti. 
+ 
+\subsection{Type Changes and {\subsecit Special} Characters}1
 We have already seen several typeface changes in this sample.  You
 can indicate italicized words or phrases in your text with
 the command \texttt{{\char'134}textit}; emboldening with the
