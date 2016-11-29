@@ -544,6 +544,23 @@ La fase di \textit{Payment}, oltre alla funzione descritta in precedenza, svolge
 \label{fig:clientState}
  \end{figure}
 
+\subsection{Esempio Flusso di Esecuzione}
+Qui di seguito illustriamo la tipica esecuzione di un utente che vuole entrare nella piattaforma per iniziare a giocare:
+\begin{itemize}
+\item Contatta l'\textit{indirizzo DNS} del \textit{Load Balancer} relativo al Cluster \textit{SuperLeader} e questo risponde fornendo la pagina di login.
+\item Una volta richiesto l'accesso attraverso il form dedicato viene mandata un ulteriore richiesta al \textit{Load Balancer} per confermare le credenziali. 
+\item Il \textit{Load Balancer} rimanda la richiesta ad uno dei server del Cluster \textit{SuperLeader} il quale controlla le credenziali; una volta confermate si "pingano" gli altri \textit{Load Balancer} e si seleziona quello con il \textit{RTT} minore.
+\item Viene instradata la richiesta verso il \textit{Load Balancer} della regione cos\'i selezionata il quale fornisce la pagina di gioco.
+\item Al primo accesso dell'utente alla piattaforma di gioco assegnata gli verr\'a richiesta la conferma di un codice di accesso (\textit{daily code}). Se il codice \'e corretto si accede alla piattaforma altrimenti si ritorna alla pagina di login.
+\end{itemize}
+
+
+
+
+
+
+
+
 \subsection{Type Changes and {\subsecit Special} Characters}1
 We have already seen several typeface changes in this sample.  You
 can indicate italicized words or phrases in your text with
