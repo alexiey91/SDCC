@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  30 NOV 2016 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  30 NOV 2016 14:37
 entering extended mode
 **sig-alternate-sample.tex
 (sig-alternate-sample.tex
@@ -223,6 +223,18 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 
 LaTeX Warning: Label `nome' multiply defined.
 
+
+LaTeX Warning: Label `notes' multiply defined.
+
+
+LaTeX Warning: Label `notes' multiply defined.
+
+
+LaTeX Warning: Label `notes' multiply defined.
+
+
+LaTeX Warning: Label `notes' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -411,130 +423,76 @@ File: connectionsFrankfurt.png Graphic file (type png)
 Package pdftex.def Info: connectionsFrankfurt.png used on input line 582.
 (pdftex.def)             Requested size: 495.34941pt x 178.03972pt.
  [6 <./stati_client.png>] [7 <./connection_login.png> <./connectionsEire.png>]
-Overfull \hbox (4.11177pt too wide) in paragraph at lines 594--595
+Overfull \hbox (3.25412pt too wide) in paragraph at lines 588--592
+\T1/aer/m/n/9 tribuzione del sis-tema su scala ge-ografica, toller-anza ai guas
+ti,
+ []
+
+
+Overfull \hbox (14.74837pt too wide) in paragraph at lines 588--592
+\T1/aer/m/n/9 sin-croniz-zazione degli eventi as-so-ciati allo stato dell'appli
+cazione
+ []
+
+
+Overfull \hbox (4.11177pt too wide) in paragraph at lines 601--602
 \T1/aer/m/n/9 una op-er-azione di \T1/aer/m/it/9 join Skiff \T1/aer/m/n/9 all'i
 nterno della rete \T1/aer/m/it/9 RAFT\T1/aer/m/n/9 . 
  []
 
 
-Overfull \hbox (1.46532pt too wide) in paragraph at lines 599--603
+Overfull \hbox (1.46532pt too wide) in paragraph at lines 606--610
 []\T1/aer/m/n/9 Un al-tro punto da miglio-rare sarebbe rel-a-tivo alla si-curez
 za
  []
 
 
-Overfull \hbox (1.68864pt too wide) in paragraph at lines 599--603
+Overfull \hbox (1.68864pt too wide) in paragraph at lines 606--610
 \T1/aer/m/n/9 in-for-mat-ica. A tal propos-ito bisognerebbe ge-stire la si-cure
 zza
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 617.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)
+! LaTeX Error: \partname undefined.
 
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 637.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 \renewcommand\partname
+                            {Riferimenti Bibliografici}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 652.
-
-[8 <./connectionsFrankfurt.png>]
-
-LaTeX Warning: Citation `bowman:reasoning' on page \thepage  undefined on input
- line 679.
-
-
-LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 6
-79.
-
-
-LaTeX Warning: Citation `braams:babel' on page \thepage  undefined on input lin
-e 679.
-
-
-LaTeX Warning: Citation `herlihy:methodology' on page \thepage  undefined on in
-put line 679.
-
-
-LaTeX Warning: Citation `clark:pct' on page \thepage  undefined on input line 6
-80.
-
-
-LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 681.
-
-
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 681.
-
-
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 687.
-
-
-LaTeX Warning: Citation `Lamport:LaTeX' on page \thepage  undefined on input li
-ne 698.
-
-
-LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 783.
-
-\c@theorem=\count117
-\c@definition=\count118
-[9]
-Overfull \hbox (15.60826pt too wide) detected at line 860
-\OML/cmm/m/it/9 l \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 f\OT1/cmr/m/n/9 (\OML/cmm
-/m/it/9 x\OT1/cmr/m/n/9 ) = [] [] = [] \OML/cmm/m/it/9 g\OT1/cmr/m/n/9 (\OML/cm
-m/m/it/9 x\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9  [] [] \OT1/cmr/m/n/9 = 0 \OMS/cmsy
-/m/n/9  \OML/cmm/m/it/9 L \OT1/cmr/m/n/9 = 0\OML/cmm/m/it/9 ;
- []
-
-
-LaTeX Warning: Citation `salas:calculus' on page \thepage  undefined on input l
-ine 870.
-
-No file sig-alternate-sample.bbl.
-[10] [11
-
-] (sig-alternate-sample.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
+[8 <./connectionsFrankfurt.png>] (sig-alternate-sample.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2881 strings out of 493673
- 35279 string characters out of 3143946
- 108593 words of memory out of 3000000
- 6142 multiletter control sequences out of 15000+200000
- 62195 words of font info for 86 fonts, out of 3000000 for 9000
+ 2830 strings out of 493673
+ 34608 string characters out of 3143946
+ 106596 words of memory out of 3000000
+ 6104 multiletter control sequences out of 15000+200000
+ 56579 words of font info for 77 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  41i,10n,34p,772b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/h
-elvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sig-alternate-sample.pdf (11 pages, 474494 bytes).
+nts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
+times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on sig-alternate-sample.pdf (8 pages, 396096 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
