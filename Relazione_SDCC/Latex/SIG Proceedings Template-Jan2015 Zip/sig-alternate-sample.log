@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  30 NOV 2016 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.7)  30 NOV 2016 16:16
 entering extended mode
 **sig-alternate-sample.tex
 (sig-alternate-sample.tex
@@ -221,9 +221,6 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
 (sig-alternate-sample.aux
 
-LaTeX Warning: Label `nome' multiply defined.
-
-
 LaTeX Warning: Label `notes' multiply defined.
 
 
@@ -278,221 +275,184 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 161.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (1.0793pt too wide) in paragraph at lines 164--173
-\T1/aer/m/it/9 Prepar-ing ACM SIG Pro-ceed-ings Us-ing L[]T[]X$\OT1/cmr/m/n/9 2
-[]$ \T1/aer/m/it/9 and BibT[]X\T1/aer/m/n/9 .
+Overfull \hbox (3.44733pt too wide) in paragraph at lines 166--167
+\T1/aer/m/it/9 me-ttessero di fo-cal-iz-zarsi prin-ci-pal-mente sul prob-lema a
+nziché
  []
 
 Excluding 'comment' comment.
-Overfull \hbox (7.84561pt too wide) in paragraph at lines 258--262
-\T1/aer/m/n/9 sviluppo della nos-tra ap-pli-cazione dis-tribuita sulla pi-attaf
-orma
- []
-
 <architettura_generale.png, id=1, 600.2425pt x 474.77374pt>
 File: architettura_generale.png Graphic file (type png)
 
 <use architettura_generale.png>
-Package pdftex.def Info: architettura_generale.png used on input line 284.
+Package pdftex.def Info: architettura_generale.png used on input line 264.
 (pdftex.def)             Requested size: 240.09274pt x 189.90613pt.
  [1{C:/Users/alessandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ] Excluding 'comment' comment.
-Overfull \hbox (3.38927pt too wide) in paragraph at lines 328--330
+Overfull \hbox (3.38927pt too wide) in paragraph at lines 308--310
 \T1/aer/m/n/9 stesura del pro-getto, dalla pro-get-tazione all'implementazione,
 
  []
 
 
-Overfull \hbox (13.15611pt too wide) in paragraph at lines 333--335
-\T1/aer/m/n/9 re-al-iz-zazione sem-pli-fi-cata del mid-dle-ware \T1/aer/m/it/9 
-HTTP\T1/aer/m/n/9 . L'applicazione
- []
-
-[2 <./architettura_generale.png>]
-Overfull \hbox (9.02611pt too wide) in paragraph at lines 356--357
-[]\T1/aer/m/n/9 Comunicazione \T1/aer/m/it/9 inter-Cluster\T1/aer/m/n/9 : Sfrut
+Overfull \hbox (7.54114pt too wide) in paragraph at lines 336--337
+[]\T1/aer/m/n/9 Comunicazione \T1/aer/m/it/9 inter-Cluster\T1/aer/m/n/9 : sfrut
 -ti-amo il servizio \T1/aer/m/it/9 AWS
  []
 
-
-Overfull \hbox (1.5437pt too wide) in paragraph at lines 379--380
+[2 <./architettura_generale.png>]
+Overfull \hbox (1.5437pt too wide) in paragraph at lines 359--360
 \T1/aer/m/n/9 pun-tate degli utenti, ren-dendo tali dati ac-ces-si-bili per l'e
 labo-
  []
 
 
-Overfull \hbox (2.36475pt too wide) in paragraph at lines 386--388
+Overfull \hbox (2.36475pt too wide) in paragraph at lines 366--368
 \T1/aer/m/n/9 Quando un'applicazione ef-fet-tua delle scrit-ture su una tabella
 
  []
 
-<Database.png, id=22, 445.665pt x 189.70876pt>
+<Database.png, id=19, 445.665pt x 189.70876pt>
 File: Database.png Graphic file (type png)
  <use Database.png>
-Package pdftex.def Info: Database.png used on input line 393.
+Package pdftex.def Info: Database.png used on input line 373.
 (pdftex.def)             Requested size: 222.83195pt x 94.85414pt.
 
-<Stati_del_sistema.png, id=23, 586.19pt x 287.0725pt>
+<Stati_del_sistema.png, id=20, 586.19pt x 287.0725pt>
 File: Stati_del_sistema.png Graphic file (type png)
 
 <use Stati_del_sistema.png>
-Package pdftex.def Info: Stati_del_sistema.png used on input line 420.
+Package pdftex.def Info: Stati_del_sistema.png used on input line 400.
 (pdftex.def)             Requested size: 234.47185pt x 114.82695pt.
  [3 <./Database.png>]
-Overfull \hbox (2.00499pt too wide) in paragraph at lines 430--433
-\T1/aer/m/n/9 com-pone di un leader e di due peer(follower). Tale definizione
- []
-
-
-Overfull \hbox (14.6419pt too wide) in paragraph at lines 457--458
+Overfull \hbox (14.6419pt too wide) in paragraph at lines 438--439
 \T1/aer/m/n/9 sis-tenti sulla tabella \T1/aer/m/it/9 Ac-counts \T1/aer/m/n/9 pe
 r mezzo delle \T1/aer/m/it/9 Dy-namoApi\T1/aer/m/n/9 . 
  []
 
 
-Overfull \hbox (7.21645pt too wide) in paragraph at lines 489--491
+Overfull \hbox (7.21645pt too wide) in paragraph at lines 470--472
 []\T1/aer/m/n/9 il val-ore del campo \T1/aer/m/it/9 phase \T1/aer/m/n/9 dello s
 tato rice-vuto cor-risponde
  []
 
 [4 <./Stati_del_sistema.png>]
-Overfull \hbox (7.21645pt too wide) in paragraph at lines 491--493
+Overfull \hbox (7.21645pt too wide) in paragraph at lines 472--474
 []\T1/aer/m/n/9 il val-ore del campo \T1/aer/m/it/9 phase \T1/aer/m/n/9 dello s
 tato rice-vuto cor-risponde
  []
 
 
-Overfull \hbox (1.33044pt too wide) in paragraph at lines 498--499
+Overfull \hbox (1.33044pt too wide) in paragraph at lines 479--480
 \T1/aer/m/n/9 elab-ora cal-colan-done l'esito e le salva nella tabella \T1/aer/
 m/it/9 Bets\T1/aer/m/n/9 ;
  []
 
 
-Overfull \hbox (5.93004pt too wide) in paragraph at lines 498--499
+Overfull \hbox (5.93004pt too wide) in paragraph at lines 479--480
 \T1/aer/m/n/9 di con-seguenza co-mu-nica al \T1/aer/m/it/9 Su-per-Leader \T1/ae
 r/m/n/9 la ter-mi-nazione
  []
 
 
-Overfull \hbox (9.69627pt too wide) in paragraph at lines 510--513
+Overfull \hbox (9.69627pt too wide) in paragraph at lines 491--494
 []\T1/aer/m/n/9 Il ter-mine scal-a-bil-itá, nelle tele-co-mu-ni-cazioni, nell'i
 ngegneria
  []
 
 
-Overfull \hbox (3.75108pt too wide) in paragraph at lines 522--523
+Overfull \hbox (3.75108pt too wide) in paragraph at lines 503--504
 \T1/aer/m/n/9 non sem-pre la ri-dotta dis-tanza fisica (dis-tanza tra la macchi
 na
  []
 
-[5] <stati_client.png, id=36, 416.55624pt x 359.3425pt>
+[5] <stati_client.png, id=33, 416.55624pt x 359.3425pt>
 File: stati_client.png Graphic file (type png)
  <use stati_client.png>
-Package pdftex.def Info: stati_client.png used on input line 542.
+Package pdftex.def Info: stati_client.png used on input line 523.
 (pdftex.def)             Requested size: 208.2776pt x 179.6708pt.
 
-Overfull \hbox (2.885pt too wide) in paragraph at lines 568--569
+Overfull \hbox (2.885pt too wide) in paragraph at lines 549--550
 []\T1/aer/m/n/9 É stata nos-tra pre-mura ge-stire al meglio la memo-ria, poiché
 
  []
 
-<connection_login.png, id=37, 709.14937pt x 315.42844pt>
+<connection_login.png, id=34, 709.14937pt x 315.42844pt>
 File: connection_login.png Graphic file (type png)
 
 <use connection_login.png>
-Package pdftex.def Info: connection_login.png used on input line 572.
+Package pdftex.def Info: connection_login.png used on input line 553.
 (pdftex.def)             Requested size: 496.40118pt x 220.79839pt.
 
-<connectionsEire.png, id=38, 887.56593pt x 323.70938pt>
+<connectionsEire.png, id=35, 887.56593pt x 323.70938pt>
 File: connectionsEire.png Graphic file (type png)
 
 <use connectionsEire.png>
-Package pdftex.def Info: connectionsEire.png used on input line 577.
+Package pdftex.def Info: connectionsEire.png used on input line 558.
 (pdftex.def)             Requested size: 532.54367pt x 194.22713pt.
 
-Overfull \hbox (28.54367pt too wide) in paragraph at lines 577--578
+Overfull \hbox (28.54367pt too wide) in paragraph at lines 558--559
  [][] 
  []
 
-<connectionsFrankfurt.png, id=39, 990.70125pt x 356.0803pt>
-File: connectionsFrankfurt.png Graphic file (type png)
+<ConnectionsFrankfurt.png, id=36, 990.70125pt x 356.0803pt>
+File: ConnectionsFrankfurt.png Graphic file (type png)
 
-<use connectionsFrankfurt.png>
-Package pdftex.def Info: connectionsFrankfurt.png used on input line 582.
+<use ConnectionsFrankfurt.png>
+Package pdftex.def Info: ConnectionsFrankfurt.png used on input line 563.
 (pdftex.def)             Requested size: 495.34941pt x 178.03972pt.
- [6 <./stati_client.png>] [7 <./connection_login.png> <./connectionsEire.png>]
-Overfull \hbox (3.25412pt too wide) in paragraph at lines 588--592
+
+Overfull \hbox (3.25412pt too wide) in paragraph at lines 569--573
 \T1/aer/m/n/9 tribuzione del sis-tema su scala ge-ografica, toller-anza ai guas
 ti,
  []
 
-
-Overfull \hbox (14.74837pt too wide) in paragraph at lines 588--592
-\T1/aer/m/n/9 sin-croniz-zazione degli eventi as-so-ciati allo stato dell'appli
-cazione
- []
-
-
-Overfull \hbox (4.11177pt too wide) in paragraph at lines 601--602
+[6 <./stati_client.png>] [7 <./connection_login.png> <./connectionsEire.png>]
+Overfull \hbox (4.11177pt too wide) in paragraph at lines 582--583
 \T1/aer/m/n/9 una op-er-azione di \T1/aer/m/it/9 join Skiff \T1/aer/m/n/9 all'i
 nterno della rete \T1/aer/m/it/9 RAFT\T1/aer/m/n/9 . 
  []
 
 
-Overfull \hbox (1.46532pt too wide) in paragraph at lines 606--610
+Overfull \hbox (1.46532pt too wide) in paragraph at lines 587--591
 []\T1/aer/m/n/9 Un al-tro punto da miglio-rare sarebbe rel-a-tivo alla si-curez
 za
  []
 
 
-Overfull \hbox (1.68864pt too wide) in paragraph at lines 606--610
+Overfull \hbox (1.68864pt too wide) in paragraph at lines 587--591
 \T1/aer/m/n/9 in-for-mat-ica. A tal propos-ito bisognerebbe ge-stire la si-cure
 zza
  []
 
-
-! LaTeX Error: \partname undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 \renewcommand\partname
-                            {Riferimenti Bibliografici}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[8 <./connectionsFrankfurt.png>] (sig-alternate-sample.aux)
+[8 <./ConnectionsFrankfurt.png>] (sig-alternate-sample.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2830 strings out of 493673
- 34608 string characters out of 3143946
- 106596 words of memory out of 3000000
- 6104 multiletter control sequences out of 15000+200000
- 56579 words of font info for 77 fonts, out of 3000000 for 9000
+ 2819 strings out of 493673
+ 34557 string characters out of 3143946
+ 105604 words of memory out of 3000000
+ 6102 multiletter control sequences out of 15000+200000
+ 50964 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  41i,10n,34p,772b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
-times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on sig-alternate-sample.pdf (8 pages, 396096 bytes).
+nts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on sig-alternate-sample.pdf (8 pages, 371637 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

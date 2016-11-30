@@ -160,29 +160,11 @@ Stefano Agostini\\
 
 \maketitle
 \begin{abstract}
+\textit{Lo scopo del progetto \'e la realizzazione di un'architettura distribuita per lo sviluppo di una piattaforma di gioco multiplayer per mezzo di tecnologie Cloud.
+Il metodo adottato per tale realizzazione \'e un processo di sviluppo che aderisce al manifesto Agile, sfruttando una metodologia di tipo Scrum, con sprint ripetuti e brevi.
+Per aderire al meglio a questo processo di sviluppo sono state utilizzate tecnologie che permettessero di focalizzarsi principalmente sul problema anzich\'e sulle difficolt\'a di realizzazione.
+Al termine di questo lavoro sono stati prodotti risultati soddisfacenti e che rispecchiano totalmente i requisiti progettuali.}
 
-This paper provides a sample of a \LaTeX\ document which conforms,
-somewhat loosely, to the formatting guidelines for
-ACM SIG Proceedings. It is an {\em alternate} style which produces
-a {\em tighter-looking} paper and was designed in response to
-concerns expressed, by authors, over page-budgets.
-It complements the document \textit{Author's (Alternate) Guide to
-Preparing ACM SIG Proceedings Using \LaTeX$2_\epsilon$\ and Bib\TeX}.
-This source file has been written with the intention of being
-compiled under \LaTeX$2_\epsilon$\ and BibTeX.
-
-The developers have tried to include every imaginable sort
-of ``bells and whistles", such as a subtitle, footnotes on
-title, subtitle and authors, as well as in the text, and
-every optional component (e.g. Acknowledgments, Additional
-Authors, Appendices), not to mention examples of
-equations, theorems, tables and figures.
-
-To make best use of this sample document, run it through \LaTeX\
-and BibTeX, and compare this source code with the printed
-output produced by the dvi file. A compiled PDF version
-is available on the web page to help you with the
-`look and feel'.
 \end{abstract}
 
 
@@ -241,10 +223,10 @@ is available on the web page to help you with the
 
 \section{Introduzione}
 
-
+\subsection{Premessa}
 Le tecnologie Cloud, esplose in questi ultimi anni, hanno permesso di trasferire il peso della computazione e dell'ap-provvigionamento delle risorse informatiche verso internet. Perci\'o la rete come strumento di sviluppo oggi offre scenari ampi nella direzione della distribuzione delle risorse e della computazione: la distribuzione, come nel caso che poniamo in esame, deve rappresentare un'avanguardia per lo sviluppo di applicazioni con caratteristiche di scalabilit\'a e di alta disponibilit\'a per l'utente finale. 
-Gli sviluppatori utilizzando i servizi cloud possono gestire in maniera semplificata l'immagazzinamento di informazioni e l'elaborazione di molti dati, concentrandosi principalmente sullo sviluppo della loro applicazione piuttosto che nell'utilizzo di un sistema ortodosso e dispendioso come avveniva nel passato.
-Aziende come \textit{Spotify}, \textit{Netflix} ed altre sfruttano il servizio cloud per rendere fruibile le loro applicazioni agli utenti di tutto il mondo, ottenendo molteplici consensi. Molti non sanno che queste applicazioni sono cos\'i efficienti proprio perch\'e sfruttano una tecnologia cloud, che per quanto possa agevolare gli utenti e gli sviluppatori, presenta sempre qualche difficolt\'a da gestire:
+Gli sviluppatori utilizzando i servizi Cloud possono gestire in maniera semplificata l'immagazzinamento di informazioni e l'elaborazione di molti dati, concentrandosi principalmente sullo sviluppo della loro applicazione piuttosto che nell'utilizzo di un sistema ortodosso e dispendioso come avveniva nel passato.
+Aziende come \textit{Spotify}, \textit{Netflix} ed altre sfruttano il servizio Cloud per rendere fruibile le loro applicazioni agli utenti di tutto il mondo, ottenendo molteplici consensi. Molti non sanno che queste applicazioni sono cos\'i efficienti proprio perch\'e sfruttano una tecnologia Cloud, che per quanto possa agevolare gli utenti e gli sviluppatori, presenta sempre qualche difficolt\'a da gestire:
 \begin{enumerate}
 \item garantire l'accesso concorrente ad una vasta molteplicit\'a di utenti.
 \item la possibilit\'a di connettersi da ogni angolo del mondo, senza ledere la qualit\'a del servizio.
@@ -254,17 +236,15 @@ Aziende come \textit{Spotify}, \textit{Netflix} ed altre sfruttano il servizio c
 
 \subsection{Obiettivi}
 
-
-L'obiettivo preposto consiste nell'elaborare un gioco multiplayer che supporta molteplici entit\'a autonome che si contendono risorse condivise, l'aggiornamento in tempo reale di una qualche forma di stato condiviso, essere distribuito su molteplici nodi (eventualmente distribuiti geograficamente) e supportare la scalabilit\'a.
+L'obiettivo del progetto consiste nell'elaborare un gioco multiplayer che supporti molteplici entit\'a autonome che si contendono risorse condivise, l'aggiornamento in tempo reale di una qualche forma di stato condiviso, la scalabilit\'a e sia distribuito su molteplici nodi (eventualmente distribuiti geograficamente).
 E' proprio con l'obiettivo di rispettare tali punti cardine che abbiamo proceduto nello sviluppo della nostra applicazione distribuita sulla piattaforma Cloud: abbiamo operato nell'intenzione di venire incontro alle esigenze degli utenti, sempre pi\'u abituati ad avere interazioni costanti e ripetute con le applicazioni di uso comune.
 Il \textit{Bellagio Casin\'o} \'e l'applicazione (accessibile mediante interfaccia Web) da noi proposta che consente agli utenti di giocare ad una versione semplificata di una roulette francese condividendo un unico tavolo di gioco.
 Tale applicazione permette di effettuare particolari puntate in base alla propria disponibilit\'a di credito.
 
-
 \section{Architettura}
 
 
-In questa sezione verr\'a illustrata a livello logico la nostra architettura descrivendo i servizi \textit{Amazon} utilizzati e i moduli sviluppati.
+In questa sezione verr\'a illustrata a livello logico la nostra architettura descrivendo i servizi \textit{Amazon} utilizzati e i moduli sviluppati (come illustrato in figure ~\ref{fig:Architettura}).
 I componenti architetturali sono:
 \begin{itemize}
 \item un Cluster composto da istanze \textit{EC2 t2-micro}, con sistema operativo \textit{Ubuntu 16.01} situato nella regione Francoforte.
@@ -282,11 +262,11 @@ i servizi \textit{AWS} sfruttati dai componenti sono:
 
 \begin{figure}\centering
  \includegraphics[scale=0.4]{architettura_generale} 
- \caption{Architettura} \label{nome} 
+ \caption{Architettura} \label{fig:Architettura} 
  \end{figure}
  
 La motivazione che ci ha spinto nell'adottare pi\'u cluster su pi\'u aree geografiche europee \'e stata la possibilit\'a di realizzare una scalabilit\'a di tipo geografico.
-Ci\'o non toglie che tale realizzazione si possa estendere anche all'interno di altre regioni geografiche messe a disposizione da \textit{AWS}. La motivazione che ci ha spinto a questa scelta \'e legata a fattori di latenza ma anche a fattori economici, oltre alla semplificazione dello sviluppo dell'applicazione e della fase di testing.
+Ci\'o non toglie che tale realizzazione si possa estendere anche all'interno di altre regioni geografiche messe a disposizione da \textit{AWS}. La causa che ci ha spinto a questa scelta \'e legata a fattori di latenza ma anche a fattori economici, oltre alla semplificazione dello sviluppo dell'applicazione e della fase di testing.
 
 
 
@@ -325,13 +305,13 @@ Contattano il servizio DynamoDB per ottenere sempre i dati aggiornati dei vari g
 \subsection{Metodologie di sviluppo}
 
 
-L'intero progetto \'e stato realizzato seguendo la metodologia di sviluppo \textit{Scrum}, la quale prevede di dividere il progetto in blocchi rapidi di lavoro(Sprint), alla fine di ciascuno dei quali si deve creare un incremento del software. L'intera stesura del progetto, dalla progettazione all'implementazione, \'e stata quindi suddivisa in sprint con scadenza molto stretta assegnati ai singoli componenti del team. 
-Per la suddivisione dei task sono stati effettuati incontri giornalieri, mentre per la sincronizzazione e per il controllo di versione \'e stato utilizzato il servizio di \textit{Google Drive}. Il periodo di sviluppo, \'e stato caratterizzato da incontri giornalieri (Daily Scrum) incentrati sulla tematica del giorno, con la presenza del team al completo. A supporto dello sviluppo \'e stato previsto, fin dal primo istante, un ulteriore incontro prima della partenza di ogni nuovo sprint.La metodologia utilizzata si \'e dimostrata efficiente poich\'e ha permesso di progettare e realizzare un architettura ben congegnata in un arco temporale ridotto.
+L'intero progetto \'e stato realizzato seguendo la metodologia di sviluppo \textit{Scrum}, la quale prevede di dividere il progetto in blocchi rapidi di lavoro (Sprint), alla fine di ciascuno dei quali si deve creare un incremento del software. L'intera stesura del progetto, dalla progettazione all'implementazione, \'e stata quindi suddivisa in sprint con scadenza molto stretta assegnati ai singoli componenti del team. 
+Per la suddivisione dei task sono stati effettuati incontri giornalieri, mentre per la sincronizzazione e per il controllo di versione \'e stato utilizzato il servizio di \textit{Google Drive}. Il periodo di sviluppo, \'e stato caratterizzato da incontri giornalieri (Daily Scrum) incentrati sulla tematica del giorno, con la presenza del team al completo. A supporto dello sviluppo \'e stato previsto, fin dal primo istante, un ulteriore incontro prima della partenza di ogni nuovo sprint. La metodologia utilizzata si \'e dimostrata efficiente poich\'e ha permesso di progettare e realizzare un architettura ben congegnata in un arco temporale ridotto.
 \subsection{Tecnologie utilizzate}
 
 
-Il lato server del progetto \'e stato interamente realizzato utilizzando il framework \textit{Node.js}, che consente di sfruttare il linguaggio \textit{JavaScript}, tipicamente utilizzato nella client-side, anche per la scrittura di applicazioni server-side. La caratteristica principale di \textit{Node.js} risiede nella possibilit\'a di accedere alle risorse del sistema operativo in modalit\'a event-driven evitando il modello basato su processi o thread concorrenti utilizzato dai classici web server. Per facilitare l'uso di \textit{Node.js} \'e stato utilizzato il framework \textit{Express.js}, per la realizzazione semplificata del middleware \textit{HTTP}.
- L'applicazione client \'e costituita da una singola pagina \textit{HTML} con contenuti \textit{Javascript} ed elaborata attraverso l'uso della libreria \textit{JQuery} rendendo l'interfaccia dinamica, consistente e di facile utilizzo. 
+Il lato server del progetto \'e stato interamente realizzato utilizzando il framework \textit{Node.js}, che consente di sfruttare il linguaggio \textit{JavaScript}, tipicamente utilizzato nel client-side, anche per la scrittura di applicazioni server-side. La caratteristica principale di \textit{Node.js} risiede nella possibilit\'a di accedere alle risorse del sistema operativo in modalit\'a event-driven evitando il modello basato su processi o thread concorrenti utilizzato dai classici web server. Per facilitare l'uso di \textit{Node.js} \'e stato utilizzato il framework \textit{Express.js}, per la realizzazione semplificata del middleware \textit{HTTP}.
+ L'applica-zione client \'e costituita da una singola pagina \textit{HTML} con contenuti \textit{Javascript} ed elaborata attraverso l'uso della libreria \textit{JQuery} rendendo l'interfaccia dinamica, consistente e di facile utilizzo. 
 
 \subsection{Raft}
 
@@ -343,20 +323,20 @@ Per l'implementazione di tale protocollo \'e stato adottata la libreria \textit{
  Implementa la persistenza dello stato attraverso un database \textit{in-memory} di tipo \textit{MemDown} il quale utilizza un'interfaccia \textit{LevelUp}. Per quanto concerne la comunicazione del log e dell'heartbeat utilizza server \textit{TCP}, in ascolto su ogni nodo, attraverso chiamate di tipo \textit{RPC}.
  
 Le motivazioni che ci hanno condotto a questa scelta sono da addurre alla semplicit\'a di esecuzione e di condivisione del log tra i vari nodi del Cluster, la cui propagazione avviene in tempi irrisori.
-L'utilizzo di \textit{Skyff} con l'architettura dei Cluster da noi ideata consente di raggiungere una certa tolleranza a guasti di vario genere sulle varie istanze \textit{EC2}.
+L'utilizzo di \textit{Skiff} con l'architettura dei Cluster da noi ideata consente di raggiungere una certa tolleranza a guasti di vario genere sulle varie istanze \textit{EC2}.
 In caso di un guasto ad una macchina, se questa risulta essere un leader quello che avviene \'e una nuova elezione, con conseguente riallineamento dei nodi del Cluster allo stato corrente del gioco.
 Nel caso di un guasto nei confronti di un follower bisogna monitorare il numero di nodi presenti nel Cluster, come precedentemente illustrato.
 
 \subsection{Comunicazione}
 
 
-Per quanto riguarda la comunicazione, vogliamo porre l'attenzione verso due tipologie presenti all'interno del nostro elaborato:
+Per quanto riguarda la comunicazione, vogliamo porre l'attenzione verso le due tipologie presenti all'interno del nostro sistema:
 \begin{itemize}
 \item Comunicazione \textit{intra-Cluster}: sfruttiamo le chiamate \textit{RPC}, come descritto nel paragrafo precedente.
-\item Comunicazione \textit{inter-Cluster}: Sfruttiamo il servizio \textit{AWS} di \textit{SNS}.
+\item Comunicazione \textit{inter-Cluster}: sfruttiamo il servizio \textit{AWS} di \textit{SNS}.
 \end{itemize}
-\textit{Amazon SNS} \'e un servizio di notifiche push rapido, flessibile e completamente gestito che ti consente di inviare messaggi individuali o collettivi a un numero elevato di destinatari. Grazie a questa soluzione, inviare notifiche push a utenti di dispositivi mobili, destinatari di posta o addirittura altri servizi distribuiti \'e semplice e conveniente.
-Per comunicare lo stato del gioco a tutti nodi dei vari Cluster sono stati creati 5 \textit{Topic} per permettere lo scambio di informazioni e di cambiamento di stato, ci\'o verr\'a chiarificato successivamente.
+\textit{Amazon SNS} \'e un servizio di notifiche push rapido, flessibile e completamente gestito che consente di inviare messaggi individuali o collettivi a un numero elevato di destinatari. Grazie a questa soluzione, inviare notifiche push a utenti di dispositivi mobili, destinatari di posta o addirittura altri servizi distribuiti \'e semplice e conveniente.
+Per comunicare lo stato del gioco a tutti nodi dei vari Cluster sono stati creati 5 \textit{Topic} per permettere lo scambio di informazioni e di cambiamento di stato; ci\'o verr\'a chiarificato successivamente.
 
 La motivazione per cui \'e stato scelto questo servizio sono le seguenti:
 \begin{itemize}
@@ -391,7 +371,7 @@ Su consiglio delle linee guida fornite da \textit{DynamoDB} abbiamo scelto di ut
 
 \begin{figure}\centering
  \includegraphics[scale=0.5]{Database} 
- \caption{Processo scrittura delle puntate con interazione DynamoDB e Redis} \label{nome} 
+ \caption{Processo scrittura delle puntate con interazione DynamoDB e Redis} \label{fig:DynamoDB} 
  \end{figure}
  
 \subsection{Implementazione Clusters}
@@ -401,7 +381,7 @@ Come illustrato precedentemente i Cluster da noi sviluppati possono essere suddi
 Tutti i Cluster definiti sono configurati, come precedentemente indicato nella sezione Architettura, con un numero fissato pari a 3 di istanze \textit{EC2}.
 La scelta di tale numero permette la gestione di un solo guasto (come descritto in \textit{Raft}) e aumentando il numero di istanze il risultato sarebbe invariato con un grado di tolleranza ai guasti maggiore.
 Un'altra motivazione che ci ha spinto a tale scelta \'e di natura economica.
-In ogni caso l'aggiunta o meno di altre istanze all'interno dei nostri Cluster pu\'o essere effettuata senza alcun problema, a patto che vengano identificate all'interno di una \textit{VPC} attraverso un tag univoco. Il sistema \'e configurato in modo che ogni istanza all'avvio sappia identificare esattamente quali sono le macchine appartenenti al proprio gruppo, permettendole di sfruttare il protocollo \textit{Raft} per comunicare con tutte le entit\'a del proprio gruppo.
+In ogni caso l'aggiunta o meno di altre istanze all'interno dei nostri Cluster pu\'o essere effettuata senza alcun problema, a patto che vengano identificate all'interno di una \textit{VPC} attraverso un tag univoco. Il sistema \'e configurato in modo che ogni istanza all'avvio sappia identificare esattamente quali sono le macchine appartenenti al proprio gruppo, permettendole di sfruttare il protocollo \textit{Raft} per comunicare con tutte le entit\'a dello stesso.
 Tutto ci\'o sinteticamente rappresenta un servizio di \textit{Discovery Service} atto a configurare dinamicamente i Cluster \textit{Raft}.
 
 \subsubsection{Stati del Sistema}
@@ -413,7 +393,7 @@ I due tipi di stato che si alternano sono:
 \item \textit{Play}: identifica le fasi di gioco dell'applicazione in cui l'utente pu\'o effettuare la puntata desiderata.
 \item \textit{Compute}: identifica la fase di estrazione del numero e il calcolo delle puntate vincenti.
 \end{itemize}
-Nella definizione di questi stati viene allegato l'istante di tempo in cui viene generato.
+Nella definizione di questi stati viene allegato l'istante di tempo in cui vengono generati.
 Si ha un cambiamento di stato quando entrambi i Cluster di gioco comunicano la terminazione dello stato corrente, come illustrato nella figura ~\ref{fig:stateSystem}.
 
 \begin{figure}\centering
@@ -427,7 +407,7 @@ Si ha un cambiamento di stato quando entrambi i Cluster di gioco comunicano la t
 
 Il \textit{SuperLeader} \'e il Cluster adibito alla definizione dello stato di gioco e all'accesso e alla registrazione degli utenti.
 
-Come primo passo definiamo la gerarchia del Cluster che si compone di un leader e di due peer(follower).
+Come primo passo definiamo la gerarchia del Cluster che si compone di un leader e di due peer (follower).
 Tale definizione \'e derivata dai ruoli che impone \textit{Raft}.
 Il leader, cos\'i come i due peer, si compone di due processi :
 \begin{itemize}
@@ -443,20 +423,21 @@ Nella fase di inizializzazione il leader si sottoscrive ai topic di interesse:
 \end{itemize}
 
 Lo schema soprastante rappresenta il ciclo naturale di esecuzione del leader. In caso di guasto di quest'ultimo viene innescata una procedura di rientro che coinvolge il nuovo leader. Esso:
-\begin{itemize}
+\begin{enumerate}
 \item si sottoscrive al topic \textit{LeaderState}.
 \item richiede ad entrambi i Cluster di gioco il loro stato corrente, i quali a loro volta lo pubblicheranno sul topic \textit{LeaderState}.
 \item confronta lo stato ricevuto da ognuno dei Custer con il suo stato corrente e se il primo \'e pi\'u recente rispetto al secondo lo sostituisce.
 \item si sottoscrive ai topic \textit{Computed} e \textit{Played} e successivamente chiede ai Cluster di gioco di ritrasmettere l'ultima azione (\textit{Computed} o \textit{Played}) da loro completata.
 \item riprende la normale esecuzione descritta sopra.
-\end{itemize} 
+\end{enumerate} 
 
 A differenza di questa funzione legata alla generazione degli stati del sistema, associata unicamente al leader, qualsiasi nodo del Cluster \textit{SuperLeader} si occupa della registrazione e dell'accesso di nuovi utenti. Attraverso la pagina web messa a disposizione agli utenti, questi possono effettuare la propria sottoscrizione al gioco: 
-\begin{itemize}
+\begin{enumerate}
+
 \item la richiesta \textit{HTTP} viene catturata dal \textit{middleware Express} del nodo server contattato.
 \item vengono estratte le credenziali dell'utente, e rese persistenti sulla tabella \textit{Accounts} per mezzo delle \textit{DynamoApi}.
 \item viene inviato al \textit{client HTTP} la conferma di avvenuta registrazione.
-\end{itemize}
+\end{enumerate}
 Per quanto riguarda il login degli utenti, il nodo del Cluster contattato alla ricezione di una tale richiesta:
 \begin{itemize}
 \item cattura la richiesta \textit{HTTP} e ne estrae le credenziali tramite \textit{middleware Express}.
@@ -507,7 +488,7 @@ Ci occorreva un servizio semplice e configurabile dinamicamente che permettesse 
 Abbiamo configurato tre \textit{Load Balancer} di cui due per i Cluster della regione \textit{Irlanda} e uno per il Cluster della regione \textit{Francoforte}. Inoltre abbiamo sfruttato il \textit{Cookie Stickiness} il quale permette di mantenere la connessione \textit{Client \ Server} stabile su una sola macchina per un intervallo di tempo fissato (nel nostro caso \textit{3 secondi}); questo risulta utile nei casi in cui un server target sta diventanto \textit{unhealty} ma non risulta ancora tale per il \textit{Load Balancer}.   
 
 \subsection{Scalabilit\'a}
-Il termine scalabilit\'a, nelle telecomunicazioni, nell'ingegneria del software, in informatica e in altre discipline, si riferisce, in termini generali, alla capacit\'a di un sistema di "crescere" o diminuire di scala in funzione delle necessit\'a e delle disponibilit\'a. Un sistema che gode di questa propriet\'a viene detto scalabile.
+Il termine scalabilit\'a, nelle telecomunicazioni, nell'ingegneria del software, in informatica e in altre discipline, si riferisce, in termini generali, alla capacit\'a di un sistema di \textit{crescere} o diminuire di scala in funzione delle necessit\'a e delle disponibilit\'a. Un sistema che gode di questa propriet\'a viene detto scalabile.
 La tipologia di scalabilit\'a implementata nel nostro sistema \'e quella \textit{geografica}.
 Un sistema geograficamente scalabile \'e quello che mantiene inalterata la sua usabilit\'a e utilit\'a indipendentemente dalla distanza fisica dei suoi utenti o delle sue risorse.
 
@@ -549,7 +530,7 @@ Qui di seguito illustriamo la tipica esecuzione di un utente che vuole entrare n
 \begin{itemize}
 \item Contatta l'\textit{indirizzo DNS} del \textit{Load Balancer} relativo al Cluster \textit{SuperLeader} e questo risponde fornendo la pagina di login.
 \item Una volta richiesto l'accesso attraverso il form dedicato viene mandata un ulteriore richiesta al \textit{Load Balancer} per confermare le credenziali. 
-\item Il \textit{Load Balancer} rimanda la richiesta ad uno dei server del Cluster \textit{SuperLeader} il quale controlla le credenziali; una volta confermate si "pingano" gli altri \textit{Load Balancer} e si seleziona quello con il \textit{RTT} minore.
+\item Il \textit{Load Balancer} rimanda la richiesta ad uno dei server del Cluster \textit{SuperLeader} il quale controlla le credenziali; una volta confermate si \textit{pingano} gli altri \textit{Load Balancer} e si seleziona quello con il \textit{RTT} minore.
 \item Viene instradata la richiesta verso il \textit{Load Balancer} della regione cos\'i selezionata il quale fornisce la pagina di gioco.
 \item Al primo accesso dell'utente alla piattaforma di gioco assegnata gli verr\'a richiesta la conferma di un codice di accesso (\textit{daily code}). Se il codice \'e corretto si accede alla piattaforma altrimenti si ritorna alla pagina di login.
 \end{itemize}
@@ -563,7 +544,7 @@ Durante il test si sono registrati e connessi ai server di gioco 30 utenti distr
 
 I risultati ottenuti attraverso questo test sono da ritenersi un successo in quanto i Cluster di gioco e quello di accesso non hanno subito alcun rallentamento. Questo test funzionale ci ha permesso di verificare che la sincronizzazione tra \textit{client} e \textit{server} non subisse alcuna alterazione rilevante dovuta al numero di utenti connessi al sistema.
 
-Inoltre osservando le risorse delle singole istanze \textit{ec2}, \'e stato riscontrato che la soglia di occupazione della memoria volatile fosse inferiore a $\sim{~}$300Mb a fronte del 1Gb messo a disposizione dalle nostre istanze \textit{EC2 t2-micro}. 
+Inoltre osservando le risorse delle singole istanze \textit{EC2}, \'e stato riscontrato che la soglia di occupazione della memoria volatile fosse inferiore a $\sim{~}$300Mb a fronte del 1Gb messo a disposizione dalle nostre istanze \textit{EC2 t2-micro}. 
 
 \'E stata nostra premura gestire al meglio la memoria, poich\'e avevamo a disposizione istanze che non forniscono una grossa quantit\'a di RAM. Infatti come primo passo abbiamo cercato di ottimizzare il codice dei server cercando di liberare pi\'u risorse possibili permettendo all'istanza di sfruttare a pieno le proprie limitate possibilit\'a. Ovviamente sfruttando istanze \textit{EC2} con una memoria volatile pi\'u elevate tale problema si sarebbe evidenziato di meno, ma a cause di fattori economici abbiamo cercato di ottimizzare quello che avevamo a nostra disposizione.
 
@@ -579,16 +560,16 @@ Inoltre osservando le risorse delle singole istanze \textit{ec2}, \'e stato risc
 \label{fig:connectionEire}
  \end{figure*}
  \begin{figure*}\centering
- \includegraphics[scale=0.5]{connectionsFrankfurt} 
+ \includegraphics[scale=0.5]{ConnectionsFrankfurt} 
  \caption{Andamento delle metriche del \textit{Load Balancer del Cluster FrankFurt}} 
 \label{fig:connectionFrankfurt}
  \end{figure*}
  
 \section{Conclusioni}
 L'obiettivo del progetto era quello di realizzare una architettura distribuita applicata al caso di un gioco multiplayer.
-Nonostante i problemi riscontrati in fase iniziale di sviluppo, dovuti all'inesperienza nel campo, siamo riusciti a sviluppare un sistema che rispondesse ai requisiti preposti: distribuzione del carico, robustezza del sistema, distribuzione del sistema su scala geografica, tolleranza ai guasti, sincronizzazione degli eventi associati allo stato dell'applicazione ed infine la consistenza dei dati.
+Nonostante i problemi riscontrati in fase iniziale di sviluppo, dovuti all'inesperienza nel campo, siamo riusciti a sviluppare un sistema che rispondesse ai requisiti preposti: distribuzione del carico, robustezza del sistema, distribuzione del sistema su scala geografica, tolleranza ai guasti, sincronizzazione degli eventi associati allo stato dell'applica-zione ed infine la consistenza dei dati.
 Il soddisfacimento di tutti questi obiettivi \'e stato avvalorato dai test funzionali effettuati.
-Seppur soddisfatti gli obbietti essenziali per la realizzazione del sistema, sono stati identificati eventuali miglioramenti; alcuni dei quali sono stati ritenuti secondari perch\'e non adeguati per l'attuale bacino d'utenza.
+Seppur soddisfatti gli obbietti essenziali per la realizzazione del sistema, sono stati identificati eventuali miglioramenti, alcuni dei quali sono stati ritenuti secondari per l'attuale bacino d'utenza.
 
 
 \section{Sviluppi Futuri}
@@ -614,38 +595,15 @@ Ad esempio \'e possibile sfruttare algoritmi basati sui grafi per il calcolo del
 Infine avendo ricevuto i feedback da parte degli utenti che hanno aderito al test dell'applicazione sono emersi delle possibile migliorie a livello grafico e logico da apportare all'applicazione per renderla pi\'u \textit{user-friendly}.
 
 
+\begin{thebibliography}{99}
 
-\begin{thebibliography}{1}
-\renewcommand\partname{Riferimenti Bibliografici}
 \bibitem{notes} \url{https://en.wikipedia.org}
 \bibitem{notes} \url{https://aws.amazon.com}
 \bibitem{notes} \url{https://expressjs.com}
 \bibitem{notes} \url{https://nodejs.org}
 \bibitem{notes} \url{https://www.npmjs.com/package/skiff}
 
-
 \end{thebibliography}
 
-%
-% The following two commands are all you need in the
-% initial runs of your .tex file to
-% produce the bibliography for the citations in your paper.
-%\bibliographystyle{abbrv}
-%\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
-% You must have a proper ".bib" file
-%  and remember to run:
-% latex bibtex latex latex
-% to resolve all references
-%
-% ACM needs 'a single self-contained file'!
-%
-%APPENDICES are optional
-%\balancecolumns
 
-
-% This next section command marks the start of
-% Appendix B, and does not continue the present hierarchy
-
-%\balancecolumns % GM June 2007
-% That's all folks!
 \end{document}
