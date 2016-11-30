@@ -46,7 +46,7 @@ router.post('/writeBet',urlencodedParser, function (req, res, message) {
 
 
   setTimeout(() => {
-   console.log("o mio dio",req.body,req.body.default);
+   console.log("writeBet",req.body,req.body.default);
 
     redisapi.setJsonRedis(redis, req.body, 'Bets');
   }, 2000);
