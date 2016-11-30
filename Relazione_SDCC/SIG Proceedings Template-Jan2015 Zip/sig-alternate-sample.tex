@@ -267,8 +267,8 @@ Tale applicazione permette di effettuare particolari puntate in base alla propri
 In questa sezione verr\'a illustrata a livello logico la nostra architettura descrivendo i servizi \textit{Amazon} utilizzati e i moduli sviluppati.
 I componenti architetturali sono:
 \begin{itemize}
-\item un Cluster composto da istanze \textit{EC2 t2-micro}, situato nella regione Francoforte.
-\item due Cluster composti da istanze \textit{EC2 t2-micro}, situate nella regione Eire.
+\item un Cluster composto da istanze \textit{EC2 t2-micro}, con sistema operativo \textit{Ubuntu 16.01} situato nella regione Francoforte.
+\item due Cluster composti da istanze \textit{EC2 t2-micro}, con sistema operativo \textit{Ubuntu 16.01} situati nella regione Eire.
 \item Client.
 \end{itemize}
 
@@ -559,16 +559,54 @@ In data 25/11/2016 dalle ore 14:30 alle ore 17:30 abbiamo testato il nostro sist
 
 Il campione di utenti era costituito prevalentemente da utenti di nazionalit\'a italiana con l'eccezione di un utente residente a Londra ed un secondo residente a Siviglia.  Entrambi hanno osservato che il server di gioco al quale si sono collegati era appartenente al Cluster irlandese; ci\'o indica che il \textit{RTT} del \textit{ping} \'e anche influenzato dalla distanza geografica delle entit\'a comunicanti oltre che dalla distanza in termini di rete, non tradendo le nostre aspettative. Tutti gli altri utenti, situati nel territorio nazionale, hanno sperimentato un reindirizzameto al Cluster della regione geografica di Francoforte.
 
-Durante il test si sono registrati e connessi ai server di gioco 30 utenti distribuiti durante l'arco temporale sopra indicato. Per mezzo del servizio \textit{Cloud Watch} abbiamo prelevato dei dati riguardanti l'andamento del carico dei tre \textit{Load Balancer}. Le metriche riportate sui grafici riguardano i valori medi in un intervallo di \textit{5 minuti} delle connessioni attive e di quelle in ingresso. 
+Durante il test si sono registrati e connessi ai server di gioco 30 utenti distribuiti durante l'arco temporale sopra indicato. Per mezzo del servizio \textit{Cloud Watch} abbiamo prelevato dei dati riguardanti l'andamento del carico dei tre \textit{Load Balancer}. Le metriche riportate sui grafici riguardano i valori medi in un intervallo di \textit{5 minuti} delle connessioni attive e di quelle in ingresso. (vedi figure~\ref{fig:connectionLogin}, ~\ref{fig:connectionEire}, ~\ref{fig:connectionFrankfurt})
 
- \begin{figure}
- \includegraphics[scale=0.35]{connection_login} 
+I risultati ottenuti attraverso questo test sono da ritenersi un successo in quanto i Cluster di gioco e quello di accesso non hanno subito alcun rallentamento. Questo test funzionale ci ha permesso di verificare che la sincronizzazione tra \textit{client} e \textit{server} non subisse alcuna alterazione rilevante dovuta al numero di utenti connessi al sistema.
+
+Inoltre osservando le risorse delle singole istanze \textit{ec2}, \'e stato riscontrato che la soglia di occupazione della memoria volatile fosse inferiore a $\sim{~}$300Mb a fronte del 1Gb messo a disposizione dalle nostre istanze \textit{EC2 t2-micro}. 
+
+\'E stata nostra premura gestire al meglio la memoria, poich\'e avevamo a disposizione istanze che non forniscono una grossa quantit\'a di RAM. Infatti come primo passo abbiamo cercato di ottimizzare il codice dei server cercando di liberare pi\'u risorse possibili permettendo all'istanza di sfruttare a pieno le proprie limitate possibilit\'a. Ovviamente sfruttando istanze \textit{EC2} con una memoria volatile pi\'u elevate tale problema si sarebbe evidenziato di meno, ma a cause di fattori economici abbiamo cercato di ottimizzare quello che avevamo a nostra disposizione.
+
+
+ \begin{figure*}\centering
+ \includegraphics[scale=0.7]{connection_login} 
  \caption{Andamento delle metriche del \textit{Load Balancer del SuperLeader}} 
 \label{fig:connectionLogin}
- \end{figure}
-
+ \end{figure*}
+\begin{figure*}\centering
+ \includegraphics[scale=0.6]{connectionsEire} 
+ \caption{Andamento delle metriche del \textit{Load Balancer del Cluster Eire}} 
+\label{fig:connectionEire}
+ \end{figure*}
+ \begin{figure*}\centering
+ \includegraphics[scale=0.5]{connectionsFrankfurt} 
+ \caption{Andamento delle metriche del \textit{Load Balancer del Cluster FrankFurt}} 
+\label{fig:connectionFrankfurt}
+ \end{figure*}
  
 \section{Sviluppi Futuri}
+Per migliorare le prestazioni del sistema abbiamo pensato di introdurre un livello di scalabilit\'a orizzontale.
+Per implementare tale funzionalit\'a bisogner\'a usufruire del servizio di \textit{Autoscaling} offerto da \textit{AWS}. Questo servizio istanzier\'a una nuova macchina \textit{EC2} configurata come le altre del Cluster in base ad alcune \textit{policy} come la saturazione della CPU oppure un eccessivo numero di connessioni in ingresso.
+Per integrare tale servizio all'interno della nostra architettura abbiamo bisogno di alcune accortezze:
+\begin{enumerate}
+\item Generare un \textit{Topic} per ogni regione per comunicare al leader del Cluster la nascita di un nuovo peer.
+\item Il nuovo peer pubblica sul \textit{Topic} il proprio ingresso al Cluster.
+\item A livello di codice il leader del Cluster deve effettuare una operazione di \textit{join Skiff} all'interno della rete \textit{RAFT}. 
+\item Il leader iscrive il nuovo peer al \textit{Load Balancer} del Cluster.
+\item Si effettua un riallineamento dello stato corrente.
+\end{enumerate}
+
+Un altro punto da migliorare sarebbe relativo alla sicurezza informatica.
+A tal proposito bisognerebbe gestire la sicurezza delle credenziali degli utenti contro possibili attacchi  di tipo \textit{Sniffing} attraverso una procedura di crittografia.
+Questo tipo di problema viene riscontrato anche nella propagazione dei \textit{cookie} atti alla gestione delle credenziali d'accesso.
+Con l'implementazione di un servizio di sicurezza efficiente \'e possibile gestire l'inserimento e la visualizzazione sul Web del credito degli utenti. 
+
+Per quanto riguarda la metrica di scalabilit\'a geografica implementata sarebbe pi\'u opportuno adottare una policy differente e pi\'u robusta rispetto al \textit{ping}.
+Ad esempio \'e possibile sfruttare algoritmi basati sui grafi per il calcolo delle distanze geografiche tra i nodi della rete.
+
+Infine avendo ricevuto i feedback da parte degli utenti che hanno aderito al test dell'applicazione sono emersi delle possibile migliorie a livello grafico e logico da apportare all'applicazione per renderla pi\'u \textit{user-friendly}.
+
+
 
 \section{Conclusioni}
 
